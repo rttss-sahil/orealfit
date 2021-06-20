@@ -1,0 +1,213 @@
+[
+  {
+    "id": 689,
+    "name": "Alaska",
+    "slug": "alaska",
+    "parent": 0,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 4,
+    "_links": {
+      "self": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/689" }
+      ],
+      "collection": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories" }
+      ]
+    }
+  },
+  {
+    "id": 618,
+    "name": "Amino",
+    "slug": "amino",
+    "parent": 617,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 2,
+    "_links": {
+      "self": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/618" }
+      ],
+      "collection": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories" }
+      ],
+      "up": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/617" }
+      ]
+    }
+  },
+  {
+    "id": 622,
+    "name": "Arginine",
+    "slug": "arginine",
+    "parent": 621,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 5,
+    "_links": {
+      "self": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/622" }
+      ],
+      "collection": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories" }
+      ],
+      "up": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/621" }
+      ]
+    }
+  },
+  {
+    "id": 619,
+    "name": "BCAA",
+    "slug": "bcaa-intra-workout",
+    "parent": 617,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 5,
+    "_links": {
+      "self": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/619" }
+      ],
+      "collection": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories" }
+      ],
+      "up": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/617" }
+      ]
+    }
+  },
+  {
+    "id": 623,
+    "name": "Beta Analine",
+    "slug": "beta-analine",
+    "parent": 621,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 4,
+    "_links": {
+      "self": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/623" }
+      ],
+      "collection": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories" }
+      ],
+      "up": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/621" }
+      ]
+    }
+  },
+  {
+    "id": 688,
+    "name": "Betancourt",
+    "slug": "betancourt",
+    "parent": 0,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 0,
+    "_links": {
+      "self": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/688" }
+      ],
+      "collection": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories" }
+      ]
+    }
+  },
+  {
+    "id": 627,
+    "name": "Body Essentials",
+    "slug": "body-essentials",
+    "parent": 582,
+    "description": "",
+    "display": "subcategories",
+    "image": null,
+    "menu_order": 0,
+    "count": 23,
+    "_links": {
+      "self": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/627" }
+      ],
+      "collection": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories" }
+      ],
+      "up": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/582" }
+      ]
+    }
+  },
+  {
+    "id": 188,
+    "name": "Brands",
+    "slug": "health-food-and-drinks",
+    "parent": 0,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 93,
+    "_links": {
+      "self": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/188" }
+      ],
+      "collection": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories" }
+      ]
+    }
+  },
+  {
+    "id": 612,
+    "name": "BSN",
+    "slug": "bsn",
+    "parent": 188,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 1,
+    "_links": {
+      "self": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/612" }
+      ],
+      "collection": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories" }
+      ],
+      "up": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/188" }
+      ]
+    }
+  },
+  {
+    "id": 686,
+    "name": "Caesin Protein",
+    "slug": "caesin-protein",
+    "parent": 566,
+    "description": "",
+    "display": "subcategories",
+    "image": null,
+    "menu_order": 0,
+    "count": 0,
+    "_links": {
+      "self": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/686" }
+      ],
+      "collection": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories" }
+      ],
+      "up": [
+        { "href": "https://orealfit.com/wp-json/wc/v3/products/categories/566" }
+      ]
+    }
+  }
+]

@@ -1,19 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
 import Head from "next/head";
-import Header from "../Header/index.jsx";
-
+import Header from "../../components/Major/Header";
+import Footer from "../../components/Major/Footer";
+import HomePage from "../../components/Major/Homepage";
+import HomePageCategories from "../../components/Minor/HomePageCategories";
 export const Home = (products) => {
   return (
     <>
       <Head>
         <title>OrealFit</title>
         <meta name="description" content="Orealfit website/app" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      {console.log(products)}
       <Header homepage={true} />
-      <div>HomePage</div>
+      <HomePageCategories />
+      <HomePage />
+      <Footer />
     </>
   );
 };

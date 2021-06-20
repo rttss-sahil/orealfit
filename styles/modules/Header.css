@@ -1,4 +1,37 @@
-.header {
-  background-color: rgba(0, 0, 0, 0.1);
+.header.homepage {
+  background-color: white;
   display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  padding: 0 0.5rem;
+  align-items: center;
+}
+
+
+.header.homepage img {
+  height: 1.7rem;
+}
+
+.header svg {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header .header___searchIcon {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+  height: 2rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.header .header___searchIcon svg {
+  font-size: 18px;
+  fill: rgba(0, 0, 0, 0.4);
 }

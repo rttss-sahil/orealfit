@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 export const Footer = (props) => {
-  return <div>Footer</div>;
+  return <div className="footer">Footer</div>;
 };
 
 const mapStateToProps = (state) => ({});
