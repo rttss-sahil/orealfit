@@ -4,7 +4,8 @@ import "../styles/dist/variables.css";
 import "../styles/dist/fonts.css";
 
 // CSS
-import "../styles/modules/Home.module.css";
+import "../styles/modules/Home.css";
+import "../styles/modules/Header.css";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

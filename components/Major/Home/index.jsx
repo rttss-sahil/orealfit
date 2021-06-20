@@ -1,9 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Head from "next/head";
-import Header from "../Header/Header.jsx";
-// import "../../../styles/modules/Home.module.css";
-import "./Home.module.css";
+import Header from "../Header/index.jsx";
 
 export const Home = (products) => {
   return (
