@@ -1,6 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import Head from "next/head";
+import Header from "../Header/Header.jsx";
+// import "../../../styles/modules/Home.module.css";
+import "./Home.module.css";
 
 export const Home = (products) => {
   return (
@@ -11,6 +14,7 @@ export const Home = (products) => {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       {console.log(products)}
+      <Header homepage={true} />
       <div>HomePage</div>
     </>
   );
