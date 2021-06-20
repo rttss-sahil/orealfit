@@ -1,4 +1,7 @@
 .header.homepage {
+  position: fixed;
+  width: 100%;
+  top: 0;
   background-color: white;
   display: flex;
   justify-content: space-between;
