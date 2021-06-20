@@ -1,0 +1,39 @@
+@font-face {
+  font-family: brandon;
+  src: url(../public/font/brandon/Brandon_reg.otf);
+}
+
+@font-face {
+  font-family: brandon-italics;
+  src: url(../public/font/brandon/Brandon_reg_it.otf);
+}
+
+@font-face {
+  font-family: brandon-medium;
+  src: url(../public/font/brandon/Brandon_med.otf);
+}
+
+@font-face {
+  font-family: brandon-medium-italics;
+  src: url(../public/font/brandon/Brandon_med_it.otf);
+}
+
+@font-face {
+  font-family: brandon-bold;
+  src: url(../public/font/brandon/Brandon_bld.otf);
+}
+
+@font-face {
+  font-family: brandon-bold-italics;
+  src: url(../public/font/brandon/Brandon_bld_it.otf);
+}
+
+@font-face {
+  font-family: brandon-thin;
+  src: url(../public/font/brandon/Brandon_thin.otf);
+}
+
+@font-face {
+  font-family: brandon-thin-italics;
+  src: url(../public/font/brandon/Brandon_thin_it.otf);
+}
