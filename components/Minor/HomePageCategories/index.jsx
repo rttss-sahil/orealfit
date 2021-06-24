@@ -1,10 +1,21 @@
+import Link from "next/link";
 import React from "react";
 import { connect } from "react-redux";
+import categoriesSample from "../../../public/json/categoriesSample.json";
+
 export const index = (props) => {
   return (
     <div className="categories homepage">
-      <h1>Categories</h1>
-      <div className="category__list">{}</div>
+      <h2>Categories</h2>
+      <ul className="category__list">
+        {categoriesSample.map((category) => (
+          <li>
+            <Link href={`/category/${category.name.toLowerCase()}`}>
+              {category.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

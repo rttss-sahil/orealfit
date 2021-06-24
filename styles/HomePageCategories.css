@@ -1,3 +1,16 @@
 .categories.homepage {
   background-color: white;
+  /* width: 100%; */
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.categories.homepage ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.categories.homepage ul li {
+  list-style-type: none;
+  padding: 5px;
 }
