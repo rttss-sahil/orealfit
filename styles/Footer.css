@@ -1,11 +1,34 @@
 .footer {
   background-color: white;
+  padding: 0rem 3rem;
   height: 4rem;
   width: 100%;
   position: fixed;
   bottom: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-item:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-item svg {
+  color: gray;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.footer-item.active {
+  font-size: 30px;
+  color: blueviolet;
 }
