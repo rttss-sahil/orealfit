@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import Link from "next/Link";
+import Link from "next/link";
 
 export const Footer = (props) => {
   return (
