@@ -15,12 +15,15 @@ import "../styles/HomePageCategories.css";
 import { Provider } from "react-redux";
 import store from "../store";
 
+import Header from "../components/Major/Header";
+import Footer from "../components/Major/Footer";
+
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <div>
-        <Component {...pageProps} />
-      </div>
+      <Header homepage={true} />
+      <Component {...pageProps} />
+      <Footer />
     </Provider>
   );
 }
