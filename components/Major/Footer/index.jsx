@@ -8,9 +8,6 @@ import { FaList } from "react-icons/fa";
 import { BiHomeCircle } from "react-icons/bi";
 
 export const Footer = (props) => {
-  React.useEffect(() => {
-    console.log(document.URL);
-  });
   return (
     <div className="footer">
       <Link href="/" className="footer-item">
