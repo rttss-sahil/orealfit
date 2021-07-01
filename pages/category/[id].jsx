@@ -4,11 +4,23 @@ import { getAllPostIds, getPostData } from "../../lib/categories";
 import Link from "next/link";
 
 export const Product = (props) => {
-  console.log(props.products.category);
+  const [loading, setLoading] = React.useState(props.products);
+  console.log(props.products);
+  const setLoadingOff = () => {
+    setLoading(false);
+  };
+  React.useEffect(() => {
+    if (props.products.category) {
+      setLoadingOff();
+      console.log(props.products.category);
+    }
+  }, [props.products]);
   return (
     <div className="products-page">
       <ul className="products-all">
-        {props.products ? (
+        {loading ? (
+          <h2>Loading...</h2>
+        ) : (
           props.products.category.map((product) => (
             <Link
               key={product.id}
@@ -18,8 +30,6 @@ export const Product = (props) => {
               {product.name}
             </Link>
           ))
-        ) : (
-          <li>No product found</li>
         )}
       </ul>
     </div>

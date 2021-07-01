@@ -6,7 +6,6 @@ export const Category = ({ categories }) => {
   return (
     <div className="category-page">
       <h1 className="category-title">All Categories</h1>
-      {console.log("categ", categories)}
       <ul className="category-all">
         {categories.map((category) => (
           <Link
