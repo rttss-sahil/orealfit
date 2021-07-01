@@ -4,7 +4,7 @@ const initialState = {
   products: [],
 };
 
-const Products = (state = initialState, action) => {
+const Wishlist = (state = initialState, action) => {
   let newState;
   switch (action.type) {
     case actionTypes.addProductToWishlist:
@@ -13,10 +13,11 @@ const Products = (state = initialState, action) => {
 
     case actionTypes.removeProductFromWishlist:
       newState = { ...state };
+      return newState;
 
     default:
       return state;
   }
 };
 
-export default Products;
+export default Wishlist;

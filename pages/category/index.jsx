@@ -12,7 +12,7 @@ export const Category = (props) => {
           <Link
             className="category-item"
             key={category.id}
-            href={`/category/${category.name}`}
+            href={`/category/${category.slug}`}
           >
             {category.name}
           </Link>

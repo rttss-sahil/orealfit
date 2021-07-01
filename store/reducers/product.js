@@ -1,15 +1,17 @@
 import actionTypes from "../actions/actionTypes";
 
-const initialState = { products: [] };
+const initialState = {
+  product: {},
+};
 
-const Cart = (state = initialState, action) => {
+const Product = (state = initialState, action) => {
   let newState;
   switch (action.type) {
-    case actionTypes.addProductToCart:
+    case actionTypes.addProductToPage:
       newState = { ...state, products: [{ name: "abc" }] };
       return newState;
 
-    case actionTypes.removeProductFromCart:
+    case actionTypes.removeProductFromPage:
       newState = { ...state };
       return newState;
 
@@ -18,4 +20,4 @@ const Cart = (state = initialState, action) => {
   }
 };
 
-export default Cart;
+export default Product;
