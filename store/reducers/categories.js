@@ -4,7 +4,7 @@ const initialState = { categories: helperMethods.getAllCategories() };
 
 const Categories = (state = initialState, action) => {
   let newState;
-  console.log(state);
+  // console.log(state);
   switch (action.type) {
     case actionTypes.addProductToCart:
       newState = { ...state, products: [{ name: "abc" }] };

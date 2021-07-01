@@ -1,19 +1,20 @@
-import products from "../../json/products.json";
-import categories from "../../json/categories.json";
-
 import api from "../../lib/api";
 
 const helperMethods = {
-  findProductByID: (pid) => products.find((p) => p.id === pid),
-  findCategoryByID: (cid) => categories.find((c) => c.id === cid),
-  // findProductBycategory: (cid) =>
-  getAllCategories: async () => {
-    const categories = await fetch(`${api.apiUrl}/category/all`).then((res) =>
+  findProductByID: async (pid) => {
+    const product = await fetch(`${api.apiUrl}/product/${pid}`).then((res) =>
       res.json()
     );
-    console.log(categories);
-    return categories;
+    return product;
   },
+  findCategoryByID: async (cid) => {
+    const category = await fetch(`${api.apiUrl}/category/${cid}`)
+      .then((res) => res.json())
+      .then((data) => data);
+  },
+  // findProductBycategory: (cid) =>
+  getAllCategories: async () =>
+    await fetch(`${api.apiUrl}/category/all`).then((res) => res.json()),
 };
 
 export default helperMethods;
