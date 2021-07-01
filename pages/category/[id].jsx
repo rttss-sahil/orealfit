@@ -1,15 +1,20 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getAllPostIds, getPostData } from "../../lib/categories";
+import Link from "next/link";
 
 export const Product = (props) => {
-  console.log(typeof props.products);
+  console.log(props.products.category);
   return (
     <div className="products-page">
-      <ul>
+      <ul className="products-all">
         {props.products ? (
-          props.products.map((product) => (
-            <Link key={product.id} className="products-page-item">
+          props.products.category.map((product) => (
+            <Link
+              key={product.id}
+              href={`/product/${product.id}`}
+              className="products-page-item"
+            >
               {product.name}
             </Link>
           ))
@@ -30,8 +35,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log(params.id);
-  const products = getPostData(params.id);
+  const products = await getPostData(params.id);
   return {
     props: {
       products,

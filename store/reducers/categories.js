@@ -5,7 +5,6 @@ const initialState = categories;
 
 const Categories = (state = initialState, action) => {
   let newState;
-  console.log("state", state.length);
   switch (action.type) {
     case actionTypes.addProductToCart:
       newState = { ...state, products: [{ name: "abc" }] };

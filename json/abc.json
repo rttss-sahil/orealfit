@@ -1,0 +1,307 @@
+{
+  "id": 6442,
+  "name": "GAT Sport Flexx EAAs+ Hydration",
+  "slug": "gat-sport-flexx-eaas-hydration",
+  "permalink": "https://orealfit.com/product/gat-sport-flexx-eaas-hydration/",
+  "date_created": "2021-03-27T14:02:44",
+  "date_created_gmt": "2021-03-27T14:02:44",
+  "date_modified": "2021-06-24T09:22:15",
+  "date_modified_gmt": "2021-06-24T09:22:15",
+  "type": "simple",
+  "status": "publish",
+  "featured": false,
+  "catalog_visibility": "visible",
+  "description": "<h2 id=\"title\" class=\"a-size-large a-spacing-none\"><span id=\"productTitle\" class=\"a-size-large product-title-word-break\">GAT Sport Flexx EAAs+ Hydration</span></h2>\n<h4 class=\"default\">Product description</h4>\n<div id=\"productDescription\" class=\"a-section a-spacing-small\">\n<p><em>FLEXX EAAs delivers all 9 Essential Amino Acids (EAAs) for complete muscle protein synthesis. The result: Muscle preservation, energy, enhanced endurance, and recovery. This total amino acid profile features 7g of EAAs, with 5g in the clinically preferred 2:1:1 ratio. For stress mitigation and improved vitality, it includes 125mg of the adaptogenic herb Sensoril Ashwagandha. Our amazing flavors provide hydration support that’s truly delicious, anytime: Pre, Intra, and Post-Workout. For the hard training athlete, FLEXX EAAs is the complete muscle and recovery solution.</em></p>\n</div>\n",
+  "short_description": "<h2 id=\"title\" class=\"a-size-large a-spacing-none\"><span id=\"productTitle\" class=\"a-size-large product-title-word-break\">GAT Sport Flexx EAAs+ Hydration</span></h2>\n<ul class=\"a-unordered-list a-vertical a-spacing-mini\">\n<li><span class=\"a-list-item\">Essential Aminos &#8211; Each serving of Flexx EAAs contains 7g of Essential Amino Acids to help promote muscle protein synthesis</span></li>\n<li><span class=\"a-list-item\">Adaptogen Driven Vitality Support &#8211; Flexx EAAs provides 125mg of Ashwagandha to help promote better Cortisol support</span></li>\n<li><span class=\"a-list-item\">Enhanced Recovery &#8211; In addition to EAAs, each serving is packed with 5g of Branched Chain Amino Acids to support better recovery</span></li>\n<li><span class=\"a-list-item\">Balanced Hydration &#8211; Coconut water provides a balanced mixture of minerals and electrolytes to support optimal hydration levels</span></li>\n<li><span class=\"a-list-item\">Endurance Fuel &#8211; Flexx EAAs are perfect for any activity from weight lifting to hiking, bicycling and anything in between</span></li>\n</ul>\n<p><a href=\"https://orealfit.com/certificates/\" target=\"_blank\" rel=\"noopener\"><span style=\"color: black;\">View Certificates</span></a></p>\n<p><a href=\"https://orealfit.com/wp-content/uploads/2021/03/COD-final-logo1.jpg\"><img class=\"alignnone size-full wp-image-6341\" src=\"https://orealfit.com/wp-content/uploads/2021/03/COD-final-logo1.jpg\" alt=\"\" width=\"292\" height=\"77\" /></a></p>\n",
+  "sku": "",
+  "price": "3299",
+  "regular_price": "4199",
+  "sale_price": "3299",
+  "date_on_sale_from": null,
+  "date_on_sale_from_gmt": null,
+  "date_on_sale_to": null,
+  "date_on_sale_to_gmt": null,
+  "on_sale": true,
+  "purchasable": true,
+  "total_sales": 0,
+  "virtual": false,
+  "downloadable": false,
+  "downloads": [],
+  "download_limit": -1,
+  "download_expiry": -1,
+  "external_url": "",
+  "button_text": "",
+  "tax_status": "taxable",
+  "tax_class": "",
+  "manage_stock": false,
+  "stock_quantity": null,
+  "backorders": "no",
+  "backorders_allowed": false,
+  "backordered": false,
+  "low_stock_amount": null,
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+    "length": "",
+    "width": "",
+    "height": ""
+  },
+  "shipping_required": true,
+  "shipping_taxable": true,
+  "shipping_class": "",
+  "shipping_class_id": 0,
+  "reviews_allowed": true,
+  "average_rating": "0.00",
+  "rating_count": 0,
+  "upsell_ids": [],
+  "cross_sell_ids": [],
+  "parent_id": 0,
+  "purchase_note": "",
+  "categories": [
+    {
+      "id": 618,
+      "name": "Amino",
+      "slug": "amino"
+    },
+    {
+      "id": 188,
+      "name": "Brands",
+      "slug": "health-food-and-drinks"
+    },
+    {
+      "id": 620,
+      "name": "EAA",
+      "slug": "eaa"
+    },
+    {
+      "id": 693,
+      "name": "GAT",
+      "slug": "gat"
+    },
+    {
+      "id": 617,
+      "name": "Intra Workout",
+      "slug": "intra-workout"
+    },
+    {
+      "id": 558,
+      "name": "Pre/Intra Workout",
+      "slug": "pre-intra-workout"
+    }
+  ],
+  "tags": [],
+  "images": [
+    {
+      "id": 6445,
+      "date_created": "2021-03-27T14:01:06",
+      "date_created_gmt": "2021-03-27T14:01:06",
+      "date_modified": "2021-03-27T14:01:06",
+      "date_modified_gmt": "2021-03-27T14:01:06",
+      "src": "https://i0.wp.com/orealfit.com/wp-content/uploads/2021/03/Flexx.jpg?fit=1024%2C1024&ssl=1",
+      "name": "Flexx",
+      "alt": ""
+    },
+    {
+      "id": 6443,
+      "date_created": "2021-03-27T13:58:26",
+      "date_created_gmt": "2021-03-27T13:58:26",
+      "date_modified": "2021-03-27T13:58:26",
+      "date_modified_gmt": "2021-03-27T13:58:26",
+      "src": "https://i1.wp.com/orealfit.com/wp-content/uploads/2021/03/GAT-eaa.jpg?fit=900%2C1500&ssl=1",
+      "name": "GAT eaa",
+      "alt": ""
+    },
+    {
+      "id": 6444,
+      "date_created": "2021-03-27T13:59:08",
+      "date_created_gmt": "2021-03-27T13:59:08",
+      "date_modified": "2021-03-27T13:59:08",
+      "date_modified_gmt": "2021-03-27T13:59:08",
+      "src": "https://i1.wp.com/orealfit.com/wp-content/uploads/2021/03/gat-eaas.jpg?fit=401%2C500&ssl=1",
+      "name": "gat eaas",
+      "alt": ""
+    }
+  ],
+  "attributes": [],
+  "default_attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "menu_order": 0,
+  "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#8377;</span>4,199.00</bdi></span></del> <ins><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#8377;</span>3,299.00</bdi></span></ins>",
+  "related_ids": [2854, 2852, 2847, 2742, 2845],
+  "meta_data": [
+    {
+      "id": 48098,
+      "key": "br_labels",
+      "value": {
+        "bottom_padding": "",
+        "left_padding": "",
+        "right_padding": "",
+        "top_padding": "",
+        "bottom_margin": "",
+        "left_margin": "",
+        "right_margin": "",
+        "top_margin": "",
+        "padding_horizontal": "",
+        "padding_top": "",
+        "better_position": "",
+        "border_radius": "",
+        "color_use": "0",
+        "content_type": "",
+        "data": [],
+        "discount_minus": "",
+        "font_color": "",
+        "font_size": "",
+        "image": "",
+        "image_height": "",
+        "image_width": "",
+        "img_title": "",
+        "label_from_post": "",
+        "line_height": "",
+        "line_height_units": "",
+        "position": "",
+        "text": "",
+        "text_after": "",
+        "text_after_nl": "",
+        "text_before": "",
+        "text_before_nl": "",
+        "template": "",
+        "tooltip_close_delay": "",
+        "tooltip_close_on_click": "",
+        "tooltip_content": "",
+        "tooltip_max_width": "",
+        "tooltip_open_delay": "",
+        "tooltip_open_on": "",
+        "tooltip_position": "",
+        "tooltip_theme": "",
+        "tooltip_use_arrow": "",
+        "type": "",
+        "zindex": "",
+        "border_radius_units": "",
+        "font_size_units": "",
+        "image_height_units": "",
+        "image_width_units": "",
+        "margin_units": "",
+        "padding_units": "",
+        "padding_top_units": "",
+        "padding_horizontal_units": "",
+        "div_custom_class": "",
+        "div_custom_css": "",
+        "span_custom_class": "",
+        "span_custom_css": "",
+        "b_custom_class": "",
+        "b_custom_css": "",
+        "i1_custom_class": "",
+        "i1_custom_css": "",
+        "i2_custom_class": "",
+        "i2_custom_css": "",
+        "i3_custom_class": "",
+        "i3_custom_css": "",
+        "i4_custom_class": "",
+        "i4_custom_css": "",
+        "color": "",
+        "font_family": "",
+        "line": ""
+      }
+    },
+    {
+      "id": 48099,
+      "key": "_last_editor_used_jetpack",
+      "value": "classic-editor"
+    },
+    {
+      "id": 48114,
+      "key": "_wp_page_template",
+      "value": "default"
+    },
+    {
+      "id": 48115,
+      "key": "_wpuf_form_id",
+      "value": ""
+    },
+    {
+      "id": 48116,
+      "key": "_wpuf_lock_editing_post",
+      "value": "no"
+    },
+    {
+      "id": 48117,
+      "key": "_custom_thank_you_page",
+      "value": "0"
+    },
+    {
+      "id": 48118,
+      "key": "_custom_thank_you_page_priority",
+      "value": "10"
+    },
+    {
+      "id": 48138,
+      "key": "_scr_post_options",
+      "value": {
+        "stats-list": {
+          "feature": {
+            "stat_name": "Feature",
+            "rating": "0"
+          }
+        },
+        "pros-list": "",
+        "cons-list": "",
+        "post_author_review_settings": {
+          "0": "[starcat_review_summary show_author_reviews_summary=\"1\" show_user_reviews_summary=\"0\" show_pros_and_cons_summary=\"1\"]",
+          "can_show_author_review": "apply_global_settings",
+          "custom_location": "",
+          "location": "after"
+        },
+        "post_user_review_settings": {
+          "0": "[starcat_review_summary show_author_reviews_summary=\"0\" show_user_reviews_summary=\"1\" show_pros_and_cons_summary=\"0\"]",
+          "can_show_user_review": "apply_global_settings",
+          "custom_location": "",
+          "location": "after"
+        }
+      }
+    },
+    {
+      "id": 48139,
+      "key": "_commission_per_product",
+      "value": "0"
+    },
+    {
+      "id": 48140,
+      "key": "_wcmp_cancallation_policy",
+      "value": ""
+    },
+    {
+      "id": 48141,
+      "key": "_wcmp_refund_policy",
+      "value": ""
+    },
+    {
+      "id": 48142,
+      "key": "_wcmp_shipping_policy",
+      "value": ""
+    },
+    {
+      "id": 48143,
+      "key": "berocket_post_order",
+      "value": "0"
+    },
+    {
+      "id": 52405,
+      "key": "_alg_wc_wl_added_by_unregistered_users_count",
+      "value": "1"
+    }
+  ],
+  "stock_status": "instock",
+  "_links": {
+    "self": [
+      {
+        "href": "https://orealfit.com/wp-json/wc/v3/products/6442"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://orealfit.com/wp-json/wc/v3/products"
+      }
+    ]
+  }
+}
