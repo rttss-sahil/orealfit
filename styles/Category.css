@@ -1,6 +1,8 @@
 .category-title {
   background-color: white;
   padding: 1rem 2rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
+    -5px -5px 5px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -9,6 +11,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   list-style-type: none;
   margin-top: 2rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
+    -5px -5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .category-all a {

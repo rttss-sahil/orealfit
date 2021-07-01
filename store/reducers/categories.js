@@ -1,10 +1,11 @@
 import actionTypes from "../actions/actionTypes";
 import helperMethods from "../helper/find";
-const initialState = { categories: helperMethods.getAllCategories() };
+import categories from "../../json/categories.json";
+const initialState = categories;
 
 const Categories = (state = initialState, action) => {
   let newState;
-  // console.log(state);
+  console.log("state", state.length);
   switch (action.type) {
     case actionTypes.addProductToCart:
       newState = { ...state, products: [{ name: "abc" }] };

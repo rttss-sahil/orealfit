@@ -1,9 +1,10 @@
 .categories.homepage {
   padding: 0 2rem;
   background-color: white;
-  /* width: 100%; */
   overflow-y: hidden;
   overflow-x: scroll;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
+    -5px -5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .categories.homepage ul {
