@@ -1,0 +1,25 @@
+.category-title {
+  background-color: white;
+  padding: 1rem 2rem;
+}
+
+
+.category-all {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style-type: none;
+  margin-top: 2rem;
+}
+
+.category-all a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.category-all a:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}

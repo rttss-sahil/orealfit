@@ -11,6 +11,7 @@ import "../styles/Footer.css";
 import "../styles/Products.css";
 import "../styles/Wishlist.css";
 import "../styles/HomePageCategories.css";
+import "../styles/Category.css";
 
 import { Provider } from "react-redux";
 import store from "../store";
