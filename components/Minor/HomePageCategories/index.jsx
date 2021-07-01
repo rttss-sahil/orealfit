@@ -10,7 +10,10 @@ export const index = (props) => {
       <ul className="category__list">
         {categoriesSample.map((category) => (
           <li>
-            <Link href={`/category/${category.name.toLowerCase()}`}>
+            <Link
+              key={category.id}
+              href={`/category/${category.name.toLowerCase()}`}
+            >
               {category.name}
             </Link>
           </li>

@@ -1,11 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
 import Link from "next/link";
-import categories from "../../json/categories.json";
+
+const categories = [
+  {
+    id: 1,
+    slug: "hel",
+    name: "abc",
+  },
+];
 
 export const Category = (props) => {
   return (
-    <div classname="category-page">
+    <div className="category-page">
       <h1 className="category-title">All Categories</h1>
       <ul className="category-all">
         {categories.map((category) => (

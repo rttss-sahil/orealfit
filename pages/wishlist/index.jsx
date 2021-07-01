@@ -5,7 +5,7 @@ export const Wishlist = (props) => {
   return (
     <div className="wishlist-page">
       <h1>Wishlist</h1>
-      <div classname="wishlist-all"></div>
+      <div className="wishlist-all"></div>
     </div>
   );
 };
