@@ -9,6 +9,7 @@ import "../styles/Header.css";
 import "../styles/Cart.css";
 import "../styles/Footer.css";
 import "../styles/Products.css";
+import "../styles/Product.css";
 import "../styles/Wishlist.css";
 import "../styles/HomePageCategories.css";
 import "../styles/Category.css";

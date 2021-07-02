@@ -11,7 +11,7 @@ import { MdAddShoppingCart } from "react-icons/md";
 import actions from "../../store/actions/actions";
 
 export const ProductListFromCatgory = (props) => {
-  const [loading, setLoading] = React.useState(props.products);
+  const [loading, setLoading] = React.useState(!props.products);
   const setLoadingOff = () => {
     setLoading(false);
   };

@@ -13,4 +13,5 @@ module.exports = {
       "i9.wp.com",
     ],
   },
+  target: "serverless",
 };
