@@ -9,7 +9,6 @@ import "react-awesome-slider/dist/styles.css";
 
 export const Product = (props) => {
   const [loading, setLoading] = React.useState(!props.products);
-  const AutoplaySlider = withAutoplay(AwesomeSlider);
 
   const setLoadingOff = () => {
     setLoading(false);

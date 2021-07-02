@@ -51,8 +51,8 @@ export const ProductListFromCatgory = (props) => {
                   <MdAddShoppingCart />
                 </div>
               </div>
+              {/* {console.log(product.images)} */}
               <Link href={`/product/${product.id}`}>
-                {console.log(product.images)}
                 {product.images[0] ? (
                   <Image
                     src={`${product.images[0].src}`}
@@ -61,7 +61,7 @@ export const ProductListFromCatgory = (props) => {
                     width={200}
                   />
                 ) : (
-                  <></>
+                  <div></div>
                 )}
               </Link>
               <Link href={`/product/${product.id}`}>
