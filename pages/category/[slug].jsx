@@ -52,13 +52,16 @@ export const ProductListFromCatgory = (props) => {
                 </div>
               </div>
               <Link href={`/product/${product.id}`}>
-                {product.images && (
+                {console.log(product.images)}
+                {product.images[0] ? (
                   <Image
                     src={`${product.images[0].src}`}
                     className="products-page-item-image"
                     height={200}
                     width={200}
                   />
+                ) : (
+                  <></>
                 )}
               </Link>
               <Link href={`/product/${product.id}`}>
