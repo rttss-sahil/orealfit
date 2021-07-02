@@ -6,7 +6,7 @@ import {
 } from "../../lib/productListfromCategory";
 import Link from "next/link";
 import Image from "next/image";
-import { BsHeartFill, BsStarFill } from "react-icons/bs";
+import { BsStarFill } from "react-icons/bs";
 import { MdAddShoppingCart } from "react-icons/md";
 import actions from "../../store/actions/actions";
 
@@ -26,6 +26,7 @@ export const ProductListFromCatgory = (props) => {
   }, [props.products]);
   return (
     <div className="products-page">
+      {!loading && <h1>{props.products.category.length} Products Found</h1>}
       {loading ? (
         <h2>Loading...</h2>
       ) : (

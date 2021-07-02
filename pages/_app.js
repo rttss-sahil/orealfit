@@ -14,6 +14,8 @@ import "../styles/Wishlist.css";
 import "../styles/HomePageCategories.css";
 import "../styles/Category.css";
 
+import "react-awesome-slider/dist/styles.css";
+
 import { Provider } from "react-redux";
 import store from "../store";
 

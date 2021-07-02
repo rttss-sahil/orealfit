@@ -1,9 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getAllProductIds, getProductData } from "../../lib/product";
+import Image from "next/image";
+
+import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
+import "react-awesome-slider/dist/styles.css";
 
 export const Product = (props) => {
   const [loading, setLoading] = React.useState(!props.products);
+  const AutoplaySlider = withAutoplay(AwesomeSlider);
+
   const setLoadingOff = () => {
     setLoading(false);
   };
@@ -22,7 +29,17 @@ export const Product = (props) => {
         <h1>loading...</h1>
       ) : (
         <>
-          <div className="product-page-carousel"></div>
+          <div className="product-page-carousel">
+            <AwesomeSlider animation="cubeAnimation">
+              {props.products.place.images.map((image, index) => {
+                return (
+                  <div key={index}>
+                    <Image height={300} width={300} src={image.src} />
+                  </div>
+                );
+              })}
+            </AwesomeSlider>
+          </div>
           <div className="product-page-name">{props.products.place.name}</div>
         </>
       )}

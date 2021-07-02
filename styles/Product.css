@@ -1,7 +1,26 @@
-.product-page {}
-
 .product-page-carousel {
-  height: 40vh;
   background-color: white;
-  width: 100%;
+}
+
+.awssld {
+  height: 45vh !important;
+  box-shadow:
+    -5px -5px 5px rgba(0, 0, 0, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.awssld__content {
+  background-color: white !important;
+  height: max-content !important;
+  margin-top: 2rem !important;
+}
+
+.awssld__bullets {
+  bottom: 15px !important;
+}
+
+.awssld__bullets button {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  width: 8px !important;
+  height: 8px !important;
 }

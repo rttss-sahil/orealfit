@@ -1,8 +1,13 @@
-.products-page {
+.products-page h1 {
+  padding: 2rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
+    -5px -5px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
   background-color: white;
 }
 
 .products-all {
+  background-color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
