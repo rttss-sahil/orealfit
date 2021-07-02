@@ -52,12 +52,14 @@ export const ProductListFromCatgory = (props) => {
                 </div>
               </div>
               <Link href={`/product/${product.id}`}>
-                <Image
-                  src={`${product.images[0].src}`}
-                  className="products-page-item-image"
-                  height={200}
-                  width={200}
-                />
+                {product.images && (
+                  <Image
+                    src={`${product.images[0].src}`}
+                    className="products-page-item-image"
+                    height={200}
+                    width={200}
+                  />
+                )}
               </Link>
               <Link href={`/product/${product.id}`}>
                 <div className="products-page-item-name">
