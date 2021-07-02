@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Image from "next/image";
 import logo from "../../../public/img/logo2.jpg";
-import { BsSearch, BsHeart } from "react-icons/bs";
+import { BsSearch, BsHeartFill } from "react-icons/bs";
 import Link from "next/link";
 export const Header = ({ state, homepage }) => {
   return (
@@ -17,7 +17,7 @@ export const Header = ({ state, homepage }) => {
             </div>
           </Link>
           <Link href="/wishlist" className="header___wishlist">
-            <BsHeart color="red" fill="red" />
+            <BsHeartFill color="red" fill="red" />
           </Link>
         </div>
       ) : (

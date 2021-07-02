@@ -3,6 +3,7 @@ import actionTypes from "../actions/actionTypes";
 const initialState = { products: [] };
 
 const Cart = (state = initialState, action) => {
+  console.log("action triggered");
   let newState;
   switch (action.type) {
     case actionTypes.addProductToCart:

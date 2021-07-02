@@ -22,12 +22,12 @@ export const Footer = (props) => {
           Categories
         </div>
       </Link>
-      <Link href="/shop" className="footer-item">
+      {/* <Link href="/shop" className="footer-item">
         <div className="footer-item">
           <AiFillShop />
           Shop
         </div>
-      </Link>
+      </Link> */}
       <Link href="/cart" className="footer-item">
         <div className="footer-item">
           <FiShoppingCart />

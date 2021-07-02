@@ -1,4 +1,5 @@
 .header.homepage {
+  z-index: 999;
   position: fixed;
   width: 100%;
   top: 0;
@@ -18,7 +19,7 @@
 }
 
 .header svg {
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
 }
 
