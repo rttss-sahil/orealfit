@@ -22,7 +22,6 @@ export const Header = ({ state, homepage }) => {
             <div>
               <BsHeartFill color="red" fill="red" />
               {state.wishlist.length}
-              {console.log(state.wishlist)}
             </div>
           </Link>
         </div>

@@ -7,7 +7,6 @@ export const Category = ({ state }) => {
     <div className="category-page">
       <h1 className="category-title">All Categories</h1>
       <ul className="category-all">
-        {console.log("cate", state.categories)}
         {[...state.categories].map((category) => (
           <Link
             className="category-item"

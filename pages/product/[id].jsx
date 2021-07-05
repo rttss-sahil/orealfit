@@ -4,7 +4,7 @@ import { getAllProductIds, getProductData } from "../../lib/product";
 
 import "react-awesome-slider/dist/styles.css";
 import actions from "../../store/actions/actions";
-import { IndividualProduct } from "../../components/Major/individualProduct";
+import IndividualProduct from "../../components/Major/IndividualProduct";
 
 export const Product = ({ state, dispatch, product }) => {
   const [loading, setLoading] = React.useState(!product),
@@ -23,7 +23,6 @@ export const Product = ({ state, dispatch, product }) => {
   React.useEffect(() => {
     if (product.category) {
       setLoadingOff();
-      // console.log(product.category);
     }
   }, [product]);
   return (

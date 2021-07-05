@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsHeart, BsHeartFill, BsStarFill } from "react-icons/bs";
 
-export const index = ({
+export const Product = ({
   product,
   state,
   addToWishlist,
@@ -41,7 +41,6 @@ export const index = ({
           </div>
         )}
       </div>
-      {/* {console.log(product.images)} */}
       <Link href={`/product/${product.id}`}>
         {product.images[0] ? (
           <Image
@@ -83,4 +82,4 @@ const mapStateToProps = (state, dispatch) => ({
 
 const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(index);
+export default connect(mapStateToProps, mapDispatchToProps)(Product);

@@ -21,7 +21,6 @@ export const ProductListFromCatgory = ({ products, state, dispatch }) => {
   React.useEffect(() => {
     if (products.category) {
       setLoadingOff();
-      console.log(products.category);
     }
   }, [products]);
   return (

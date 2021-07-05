@@ -8,10 +8,15 @@ import Link from "next/link";
 
 import AwesomeSlider from "react-awesome-slider";
 
-export const IndividualProduct = ({ product, state, key }) => {
+export const IndividualProduct = ({
+  product,
+  state,
+  addToCart,
+  removeFromWishlist,
+  addToWishlist,
+}) => {
   return (
     <>
-      {console.log(state)}
       <div className="product-page-carousel">
         <AwesomeSlider animation="cubeAnimation">
           {product.place.images.map((image, index) => {
@@ -68,9 +73,8 @@ export const IndividualProduct = ({ product, state, key }) => {
   );
 };
 
-const mapStateToProps = (state, dispatch) => ({
+const mapStateToProps = (state) => ({
   state,
-  dispatch,
 });
 
 const mapDispatchToProps = {};
