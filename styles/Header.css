@@ -13,6 +13,10 @@
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
+.header__logo {
+  cursor: pointer;
+}
+
 
 .header.homepage img {
   height: 1.7rem;

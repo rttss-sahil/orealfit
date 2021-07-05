@@ -2,12 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 import Link from "next/link";
 
-export const Category = ({ categories }) => {
+export const Category = ({ state }) => {
   return (
     <div className="category-page">
       <h1 className="category-title">All Categories</h1>
       <ul className="category-all">
-        {categories.map((category) => (
+        {console.log("cate", state.categories)}
+        {[...state.categories].map((category) => (
           <Link
             className="category-item"
             key={category.id}
@@ -21,7 +22,7 @@ export const Category = ({ categories }) => {
   );
 };
 
-const mapStateToProps = (state) => ({ categories: state.categories });
+const mapStateToProps = (state) => ({ state });
 
 const mapDispatchToProps = {};
 

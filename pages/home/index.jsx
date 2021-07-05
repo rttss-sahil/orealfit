@@ -10,7 +10,7 @@ export const Home = (products) => {
         <title>OrealFit</title>
         <meta name="description" content="Orealfit website/app" />
       </Head>
-      <HomePageCategories />
+      {/* <HomePageCategories /> */}
       <HomePage />
     </>
   );

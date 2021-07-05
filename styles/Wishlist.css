@@ -1,6 +1,5 @@
-.wishlist-page {}
-
-.wishlist-page h1 {
-  padding: 2rem 1rem;
+.wishlist-all h2 {
   background-color: white;
+  text-align: center;
+  margin-top: 2rem;
 }

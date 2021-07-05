@@ -40,9 +40,8 @@ export const ProductListFromCatgory = (props) => {
                         ((product.regular_price - product.price) /
                           product.regular_price) *
                         100
-                      ).toFixed(0)
-                    : Math.floor(Math.random() * 30) + 30}
-                  %
+                      ).toFixed(0) + "%"
+                    : ""}
                 </div>
                 <div
                   className="products-page-item-wishlist"

@@ -24,3 +24,64 @@
   width: 8px !important;
   height: 8px !important;
 }
+
+
+
+
+.product-page-name {
+  margin-top: 1rem;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-page-bottom {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 4rem;
+}
+
+.product-page-bottom>* {
+  width: 50%;
+  background-color: purple;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem 1rem;
+}
+
+.product-page-bottom>*:hover {
+  background-color: rgb(70, 1, 70);
+}
+
+
+
+.add-to-wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+}
+
+.add-to-wishlist svg {
+  margin-right: 10px;
+}

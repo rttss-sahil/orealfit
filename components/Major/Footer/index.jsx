@@ -7,10 +7,10 @@ import { AiFillShop } from "react-icons/ai";
 import { FaList } from "react-icons/fa";
 import { BiHomeCircle } from "react-icons/bi";
 
-export const Footer = (props) => {
+export const Footer = ({ state }) => {
   return (
     <div className="footer">
-      <Link href="/" className="footer-item">
+      <Link href="/" className="footer-item-link">
         <div className="footer-item">
           <BiHomeCircle />
           Home
@@ -31,7 +31,7 @@ export const Footer = (props) => {
       <Link href="/cart" className="footer-item">
         <div className="footer-item">
           <FiShoppingCart />
-          Cart
+          Cart ({state.cart.length})
         </div>
       </Link>
       <Link href="/more" className="footer-item">
@@ -44,7 +44,7 @@ export const Footer = (props) => {
   );
 };
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({ state });
 
 const mapDispatchToProps = {};
 

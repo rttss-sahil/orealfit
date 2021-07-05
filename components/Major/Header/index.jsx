@@ -9,7 +9,9 @@ export const Header = ({ state, homepage }) => {
     <>
       {homepage ? (
         <div className="header homepage">
-          <Image className="header__logo" src={logo} alt="Orealfit Logo" />
+          <Link href="/">
+            <Image className="header__logo" src={logo} alt="Orealfit Logo" />
+          </Link>
           <Link href="/search">
             <div className="header___searchIcon">
               <p>Search</p>
@@ -17,7 +19,11 @@ export const Header = ({ state, homepage }) => {
             </div>
           </Link>
           <Link href="/wishlist" className="header___wishlist">
-            <BsHeartFill color="red" fill="red" />
+            <div>
+              <BsHeartFill color="red" fill="red" />
+              {state.wishlist.length}
+              {console.log(state.wishlist)}
+            </div>
           </Link>
         </div>
       ) : (
@@ -27,7 +33,7 @@ export const Header = ({ state, homepage }) => {
   );
 };
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({ state });
 const mapDispatchToProps = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

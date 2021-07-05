@@ -1,16 +1,20 @@
 import actionTypes from "../actions/actionTypes";
 
-const initialState = { products: [] };
+const initialState = [];
 
 const Cart = (state = initialState, action) => {
   let newState;
   switch (action.type) {
     case actionTypes.addProductToCart:
-      newState = { ...state, products: [{ name: "abc" }] };
+      if (!state.some((item) => item.id === action.payload.id)) {
+        newState = [...state, action.payload];
+      } else {
+        newState = state;
+      }
       return newState;
 
     case actionTypes.removeProductFromCart:
-      newState = { ...state };
+      newState = [...state];
       return newState;
 
     default:

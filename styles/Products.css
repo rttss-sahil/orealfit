@@ -7,7 +7,6 @@
 }
 
 .products-all {
-  background-color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
@@ -16,6 +15,7 @@
 
 
 .products-page-item {
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;

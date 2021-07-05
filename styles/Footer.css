@@ -1,6 +1,6 @@
 .footer {
   background-color: white;
-  height: 5rem;
+  height: 4rem;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -15,8 +15,11 @@
 .footer-item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
+  width: 25%;
+  height: 100%;
 }
 
 .footer-item:hover {
@@ -26,7 +29,7 @@
 .footer-item svg {
   color: gray;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .footer-item.active {
