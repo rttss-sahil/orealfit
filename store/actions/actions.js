@@ -25,6 +25,18 @@ const actions = {
     type: actionTypes.removeProductFromCart,
     payload,
   }),
+  loginUser: (payload) => ({
+    type: actionTypes.loginUser,
+    payload,
+  }),
+  signupUser: (payload) => ({
+    type: actionTypes.signupUser,
+    payload,
+  }),
+  removeUser: (payload) => ({
+    type: actionTypes.removeUser,
+    payload,
+  }),
 };
 
 export default actions;
