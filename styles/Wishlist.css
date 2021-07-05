@@ -1,3 +1,10 @@
+.wishlist-all {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
+    -5px -5px 5px rgba(0, 0, 0, 0.1);
+}
+
 .wishlist-all h2 {
   background-color: white;
   text-align: center;

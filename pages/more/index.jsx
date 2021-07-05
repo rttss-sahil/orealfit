@@ -3,13 +3,8 @@ import { connect } from "react-redux";
 
 export const More = (props) => {
   return (
-    <div>
-      <ul>
-        <li>Settings</li>
-        <li>Settings</li>
-        <li>Settings</li>
-        <li>Settings</li>
-      </ul>
+    <div className="more-page">
+      <h1>Me and Orealfit</h1>
     </div>
   );
 };

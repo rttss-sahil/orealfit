@@ -12,12 +12,12 @@ export const Header = ({ state, homepage }) => {
           <Link href="/">
             <Image className="header__logo" src={logo} alt="Orealfit Logo" />
           </Link>
-          <Link href="/search">
+          {/* <Link href="/search">
             <div className="header___searchIcon">
               <p>Search</p>
               <BsSearch />
             </div>
-          </Link>
+          </Link> */}
           <Link href="/wishlist" className="header___wishlist">
             <div>
               <BsHeartFill color="red" fill="red" />
