@@ -1,26 +1,44 @@
 import React from "react";
 import { connect } from "react-redux";
+import Link from "next/link";
+
+import actions from "../../store/actions/actions";
+
 import Product from "../../components/Major/Product";
 
-export const Wishlist = ({ state }) => {
+export const Wishlist = ({ state, dispatch }) => {
+  const removeFromWishlist = (product) => {
+    dispatch(actions.removeProductFromWishlist(product));
+  };
   return (
     <div className="wishlist-page">
       <h1>My Wishlist</h1>
       <div className="wishlist-all">
-        {state.wishlist.length <= 0 ? (
-          <h2>No Products found. Please shop.</h2>
+        {state.user.loggedIn ? (
+          state.wishlist.length <= 0 ? (
+            <h2>0 Products in Wishlist. Add Products to Wishlist.</h2>
+          ) : (
+            state.wishlist.map((product, index) => (
+              <Product
+                product={product}
+                key={index}
+                removeFromWishlist={removeFromWishlist}
+              />
+            ))
+          )
         ) : (
-          state.wishlist.map((product, index) => (
-            <Product product={product} key={index} />
-          ))
+          <div className="loggedout">
+            <h2>
+              You aren't logged in to the website, please Login / Register.
+            </h2>
+            <Link href="/login">Login</Link>
+          </div>
         )}
       </div>
     </div>
   );
 };
 
-const mapStateToProps = (state) => ({ state });
+const mapStateToProps = (state, dispatch) => ({ state, dispatch });
 
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Wishlist);
+export default connect(mapStateToProps)(Wishlist);

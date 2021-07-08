@@ -7,16 +7,16 @@ import categories from "./reducers/categories";
 import user from "./reducers/user";
 import message from "./reducers/message";
 
-const store = createStore(
-  combineReducers({
-    product,
-    productsList,
-    cart,
-    wishlist,
-    categories,
-    user,
-    message,
-  })
-);
+const reducer = combineReducers({
+  product,
+  productsList,
+  cart,
+  wishlist,
+  categories,
+  user,
+  message,
+});
+
+const store = createStore(reducer);
 
 export default store;

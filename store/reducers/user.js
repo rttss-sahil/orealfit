@@ -1,31 +1,37 @@
 import actionTypes from "../actions/actionTypes";
-import api from "../../lib/api";
+
+// const initialState = {
+//   loggedIn: false,
+//   user: {},
+// };
 
 const initialState = {
-  loggedIn: false,
-  name: "Guest",
+  loggedIn: true,
+  user: {
+    email: "abc@def.com",
+    name: "undefined",
+  },
 };
 
-const User = async (state = initialState, action) => {
+const User = (state = initialState, action) => {
   let newState;
   switch (action.type) {
-    case actionTypes.loginUser:
-      console.log("state", newState);
+    case actionTypes.addUser:
       newState = { ...action.payload, loggedIn: true };
-      return newState;
-
-    case actionTypes.signupUser:
-      newState = await fetch(api.apiUrl + "/user/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(action.payload),
-      });
+      // localStorage.setItem("loggedIn", true);
+      // localStorage.setItem("name", newState.user.name);
+      // localStorage.setItem("email", newState.user.email);
       return newState;
 
     case actionTypes.removeUser:
-      newState = {};
+      newState = {
+        loggedIn: false,
+        user: {},
+      };
+      // localStorage.removeItem("user");
+      // localStorage.removeItem("name");
+      // localStorage.removeItem("email");
+      // localStorage.setItem("loggedIn", false);
       return newState;
 
     default:

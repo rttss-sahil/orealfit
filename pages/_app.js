@@ -24,13 +24,30 @@ import "react-awesome-slider/dist/styles.css";
 
 import { Provider } from "react-redux";
 import store from "../store";
+import React from "react";
 
 import Header from "../components/Major/Header";
 import Footer from "../components/Major/Footer";
 
 import Alert from "../components/Minor/Alert";
+import actions from "../store/actions/actions";
 
 function MyApp({ Component, pageProps }) {
+  React.useEffect(() => {
+    // if (
+    //   localStorage.getItem("loggedIn") === "true" &&
+    //   localStorage.getItem("email")
+    // )
+    //   store.dispatch(
+    //     actions.addUser({
+    //       loggedIn: true,
+    //       user: {
+    //         email: localStorage.getItem("email"),
+    //         name: localStorage.getItem("name") || "Unnamed",
+    //       },
+    //     })
+    //   );
+  });
   return (
     <Provider store={store}>
       <Header homepage={true} />

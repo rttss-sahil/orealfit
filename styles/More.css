@@ -19,3 +19,14 @@
 .more-page-options .option-item a:hover {
   text-decoration: underline;
 }
+
+.more-page-options .option-item.account div {
+  cursor: pointer;
+  color: blue;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.more-page-options .option-item.account div:hover {
+  text-decoration: underline;
+}

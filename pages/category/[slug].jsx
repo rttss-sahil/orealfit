@@ -12,7 +12,7 @@ export const ProductListFromCatgory = ({ products, state, dispatch }) => {
     setLoadingOff = () => {
       setLoading(false);
     },
-    removeFromWishlist = () => {
+    removeFromWishlist = (product) => {
       dispatch(actions.removeProductFromWishlist(product));
     },
     addToWishlist = (product) => {
