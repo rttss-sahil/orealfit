@@ -1,10 +1,22 @@
 import React from "react";
 
+import Link from "next/link";
+import Router from "next/router";
+
 function _error() {
   return (
-    <div>
+    <div className="error404-page">
       <h1>Error 404</h1>
-      <div>Under Maintenance. Try again Later.</div>
+      <div>
+        <p>Under Maintenance. Try again Later.</p>
+        <button
+          onClick={() => {
+            Router.push("/");
+          }}
+        >
+          Go To Home
+        </button>
+      </div>
     </div>
   );
 }

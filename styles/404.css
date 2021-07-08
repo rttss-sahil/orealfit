@@ -1,0 +1,29 @@
+.error404-page {}
+
+.error404-page>div {
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow:
+    -5px -5px 5px rgba(0, 0, 0, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+.error404-page button {
+  color: white;
+  cursor: pointer;
+  margin-top: 2rem;
+  padding: 1.5rem 4rem;
+  align-self: center;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgb(0, 110, 255);
+  box-shadow:
+    -5px -5px 5px rgba(0, 0, 0, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.error404-page button:hover {
+  background-color: rgb(0, 81, 255);
+}

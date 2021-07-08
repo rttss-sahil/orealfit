@@ -9,11 +9,12 @@ export const More = ({ state, dispatch }) => {
       <div className="more-page-options">
         {!state.user.loggedIn && (
           <div className="option-item">
-            <Link href="/login">Login</Link>
-            <Link href="/signup">Register</Link>
+            <Link href="/login">SignIn / SignUp</Link>
           </div>
         )}
-        {/* <div className="option-item"></div> */}
+        <div className="option-item">
+          <Link href="/about-us">About Us</Link>
+        </div>
         {/* <div className="option-item"></div> */}
         {/* <div className="option-item"></div> */}
         {/* <div className="option-item"></div> */}

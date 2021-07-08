@@ -11,6 +11,11 @@
 
 
 .more-page-options .option-item a {
-  color: black;
+  color: blue;
   font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.more-page-options .option-item a:hover {
+  text-decoration: underline;
 }
