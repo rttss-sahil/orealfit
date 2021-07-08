@@ -1,6 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import { FaUserAlt, FaUnlock } from "react-icons/fa";
+import Link from "next/link";
+import Router from "next/router";
+
+import api from "../../lib/api";
 
 import actions from "../../store/actions/actions";
 
@@ -8,14 +12,25 @@ export const Login = ({ state, dispatch }) => {
   const [email, setEmail] = React.useState(""),
     // [phone, setPhone] = React.useState(""),
     [password, setPassword] = React.useState(""),
-    submitLogin = (e) => {
+    submitLogin = async (e) => {
       e.preventDefault();
-      dispatch(
-        actions.loginUser({
-          email,
-          password,
-        })
-      );
+      const user = await fetch(api.apiUrl + "/user/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      }).then((res) => res.json());
+      console.log(user);
+      if (user.message) {
+        Promise.all([
+          dispatch(actions.addUser(user)),
+          dispatch(actions.addMessage(user.message)),
+        ]);
+        Router.push("/");
+      } else if (user.error) {
+        dispatch(actions.addMessage(user.error));
+      }
     };
   return (
     <div className="login-page">
@@ -43,6 +58,11 @@ export const Login = ({ state, dispatch }) => {
         </div>
         <button type="submit">Login</button>
       </form>
+      <div className="instead">
+        {"New member? "}
+        <Link href="/signup">Register</Link>
+        {" instead."}
+      </div>
     </div>
   );
 };

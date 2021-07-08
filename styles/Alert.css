@@ -1,0 +1,36 @@
+.alert-page {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.alert {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.alert p {
+  margin: 1rem 0;
+}
+
+.alert button {
+  padding: 1rem 0;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(59, 59, 252, 1);
+  color: white;
+  cursor: pointer;
+}

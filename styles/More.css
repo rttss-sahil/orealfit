@@ -1,0 +1,16 @@
+.more-page {}
+
+.more-page-options .option-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+
+.more-page-options .option-item a {
+  color: black;
+  font-size: 1.2rem;
+}

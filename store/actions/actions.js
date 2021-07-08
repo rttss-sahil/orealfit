@@ -9,6 +9,7 @@ const actions = {
     type: actionTypes.removeProductFromPage,
     payload,
   }),
+
   addProductToWishlist: (payload) => ({
     type: actionTypes.addProductToWishlist,
     payload,
@@ -17,6 +18,7 @@ const actions = {
     type: actionTypes.removeProductFromWishlist,
     payload,
   }),
+
   addProductToCart: (payload) => ({
     type: actionTypes.addProductToCart,
     payload,
@@ -25,16 +27,30 @@ const actions = {
     type: actionTypes.removeProductFromCart,
     payload,
   }),
-  loginUser: (payload) => ({
-    type: actionTypes.loginUser,
-    payload,
-  }),
-  signupUser: (payload) => ({
-    type: actionTypes.signupUser,
+
+  addUser: (payload) => ({
+    type: actionTypes.addUser,
     payload,
   }),
   removeUser: (payload) => ({
     type: actionTypes.removeUser,
+    payload,
+  }),
+
+  addMessage: (payload) => ({
+    type: actionTypes.addMessage,
+    payload,
+  }),
+  removeMessage: (payload) => ({
+    type: actionTypes.removeMessage,
+    payload,
+  }),
+  addError: (payload) => ({
+    type: actionTypes.addError,
+    payload,
+  }),
+  removeError: (payload) => ({
+    type: actionTypes.removeError,
     payload,
   }),
 };

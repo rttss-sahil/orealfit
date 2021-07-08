@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Head from "next/head";
 import HomePage from "../../components/Major/Homepage";
 import HomePageCategories from "../../components/Minor/HomePageCategories";
-export const Home = (products) => {
+export const Home = ({ state }) => {
   return (
     <>
       <Head>
@@ -16,8 +16,6 @@ export const Home = (products) => {
   );
 };
 
-const mapStateToProps = ({ products }) => ({ products });
+const mapStateToProps = (state, dispatch) => ({ state, dispatch });
 
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps)(Home);

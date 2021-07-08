@@ -13,6 +13,8 @@ import "../styles/Product.css";
 import "../styles/Wishlist.css";
 import "../styles/HomePageCategories.css";
 import "../styles/Category.css";
+import "../styles/Alert.css";
+import "../styles/More.css";
 
 import "../styles/Login.css";
 import "../styles/Signup.css";
@@ -25,10 +27,13 @@ import store from "../store";
 import Header from "../components/Major/Header";
 import Footer from "../components/Major/Footer";
 
+import Alert from "../components/Minor/Alert";
+
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <Header homepage={true} />
+      <Alert />
       <Component {...pageProps} />
       <Footer />
     </Provider>
