@@ -1,0 +1,108 @@
+.user-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.user-page form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.user-page form .input-group {
+  background-color: white;
+  border-radius: 20px;
+  margin: 1rem 0;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow:
+    -5px -5px 5px rgba(0, 0, 0, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.user-page input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 1rem;
+  outline: 0;
+  width: 80%;
+}
+
+.user-page form [type="submit"] {
+  color: white;
+  cursor: pointer;
+  margin-top: 2rem;
+  padding: 1.5rem 4rem;
+  align-self: center;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgb(0, 110, 255);
+  box-shadow:
+    -5px -5px 5px rgba(0, 0, 0, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.forgot-password {
+  margin-top: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.forgot-password a {
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.user-page form [type="submit"]:hover {
+  background-color: rgb(0, 81, 255);
+}
+
+
+.agreement,
+.instead {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.instead a,
+.agreement .link a {
+  font-size: 1.3rem;
+  color: blue;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.agreement .link a {
+  font-size: 1rem;
+}
+
+.instead a:hover,
+.agreement .link a:hover {
+  text-decoration: underline;
+}
+
+
+.input-group.alert {
+  flex-direction: row;
+}
+
+.input-group.alert svg {
+  font-size: 40px;
+  fill: orangered;
+}
+
+.input-group.alert p {
+  color: orangered;
+}

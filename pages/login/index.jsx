@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { FaUserAlt, FaUnlock } from "react-icons/fa";
+import { BsExclamation } from "react-icons/bs";
 import Link from "next/link";
 import Router from "next/router";
 
@@ -33,9 +34,16 @@ export const Login = ({ state, dispatch }) => {
       }
     };
   return (
-    <div className="login-page">
+    <div className="user-page">
       <h1>Welcome back, Enter here</h1>
       <form onSubmit={(e) => submitLogin(e)}>
+        <div className="input-group alert">
+          <BsExclamation />
+          <p>
+            Please remember your password, as we're having trouble resetting
+            them.
+          </p>
+        </div>
         <div className="input-group">
           <FaUserAlt />
           <input
@@ -55,6 +63,9 @@ export const Login = ({ state, dispatch }) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+        </div>
+        <div className="forgot-password">
+          <Link href="/forgot-password">Forgot Password ?</Link>
         </div>
         <button type="submit">Login</button>
       </form>

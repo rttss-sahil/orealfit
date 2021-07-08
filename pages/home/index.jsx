@@ -1,8 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
+
 import Head from "next/head";
+
 import HomePage from "../../components/Major/Homepage";
 import HomePageCategories from "../../components/Minor/HomePageCategories";
+
 export const Home = ({ state }) => {
   return (
     <>

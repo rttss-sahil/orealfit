@@ -6,6 +6,7 @@ import Router from "next/router";
 import api from "../../lib/api";
 
 import { FaUserAlt, FaUnlock } from "react-icons/fa";
+import { BsExclamation } from "react-icons/bs";
 import { GiCheckMark } from "react-icons/gi";
 
 import actions from "../../store/actions/actions";
@@ -36,9 +37,16 @@ export const Signup = ({ state, dispatch }) => {
       }
     };
   return (
-    <div className="signup-page">
+    <div className="user-page">
       <h1>New here? Join the Community !</h1>
       <form onSubmit={(e) => submitLogin(e)}>
+        <div className="input-group alert">
+          <BsExclamation />
+          <p>
+            Please remember your password, as we're having trouble resetting
+            them.
+          </p>
+        </div>
         <div className="input-group">
           <FaUserAlt />
           <input
@@ -61,14 +69,21 @@ export const Signup = ({ state, dispatch }) => {
           />
         </div>
         <button type="submit">Register</button>
+        <div className="forgot-password">
+          <Link href="/forgot-password">Forgot Password ?</Link>
+        </div>
       </form>
       <div className="agreement">
         <GiCheckMark />
-        {" I agree to the "}
-        <Link href="/terms-of-use">Terms of use</Link>
-        {" and "}
-        <Link href="privacy-policy">Privacy Policy</Link>
-        {" . "}
+        <p>I agree to the</p>
+        <div className="link">
+          <Link href="/terms-of-use">Terms of use</Link>
+        </div>
+        <p>and</p>
+        <div className="link">
+          <Link href="privacy-policy">Privacy Policy</Link>
+        </div>
+        <p>.</p>
       </div>
       <div className="instead">
         {"Alreay a member, "}

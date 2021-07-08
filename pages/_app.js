@@ -15,9 +15,9 @@ import "../styles/HomePageCategories.css";
 import "../styles/Category.css";
 import "../styles/Alert.css";
 import "../styles/More.css";
+import "../styles/ForgotPassword.css";
 
-import "../styles/Login.css";
-import "../styles/Signup.css";
+import "../styles/UserForm.css";
 
 import "react-awesome-slider/dist/styles.css";
 
