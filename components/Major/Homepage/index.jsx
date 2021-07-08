@@ -8,7 +8,6 @@ export const HomePage = ({ state, dispatch }) => {
     <div className="home-page">
       <h1>HomePage</h1>
       <div className="container">
-        {console.log("sjhd", state)}
         {!state.user.loggedIn && (
           <>
             <p>Become a member of Orealfit,</p>

@@ -5,14 +5,6 @@ const initialState = {
   user: {},
 };
 
-// const initialState = {
-//   loggedIn: true,
-//   user: {
-//     email: "abc@def.com",
-//     name: "undefined",
-//   },
-// };
-
 const User = (state = initialState, action) => {
   let newState;
   switch (action.type) {

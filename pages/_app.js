@@ -31,22 +31,42 @@ import Footer from "../components/Major/Footer";
 
 import Alert from "../components/Minor/Alert";
 import actions from "../store/actions/actions";
+import api from "../lib/api";
 
 function MyApp({ Component, pageProps }) {
-  React.useEffect(() => {
-    // if (
-    //   localStorage.getItem("loggedIn") === "true" &&
-    //   localStorage.getItem("email")
-    // )
-    //   store.dispatch(
-    //     actions.addUser({
-    //       loggedIn: true,
-    //       user: {
-    //         email: localStorage.getItem("email"),
-    //         name: localStorage.getItem("name") || "Unnamed",
-    //       },
-    //     })
-    //   );
+  React.useEffect(async () => {
+    if (
+      localStorage.getItem("loggedIn") === "true" &&
+      localStorage.getItem("email")
+    ) {
+      const wishlistItems = await fetch(api.apiUrl + "/wishlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: localStorage.getItem("email") }),
+      }).then((res) => res.json());
+      const cartItems = await fetch(api.apiUrl + "/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: localStorage.getItem("email") }),
+      }).then((res) => res.json());
+      Promise.all([
+        store.dispatch(
+          actions.addUser({
+            loggedIn: true,
+            user: {
+              email: localStorage.getItem("email"),
+              name: localStorage.getItem("name") || "Unnamed",
+            },
+          })
+        ),
+        store.dispatch(actions.addDirectlyToCart(cartItems.cart)),
+        store.dispatch(actions.addDirectlyToWishlist(wishlistItems.wishlist)),
+      ]);
+    }
   });
   return (
     <Provider store={store}>

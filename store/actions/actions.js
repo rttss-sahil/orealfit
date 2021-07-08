@@ -14,6 +14,10 @@ const actions = {
     type: actionTypes.addProductToWishlist,
     payload,
   }),
+  addDirectlyToWishlist: (payload) => ({
+    type: actionTypes.addDirectlyToWishlist,
+    payload,
+  }),
   removeProductFromWishlist: (payload) => ({
     type: actionTypes.removeProductFromWishlist,
     payload,
@@ -21,6 +25,10 @@ const actions = {
 
   addProductToCart: (payload) => ({
     type: actionTypes.addProductToCart,
+    payload,
+  }),
+  addDirectlyToCart: (payload) => ({
+    type: actionTypes.addDirectlyToCart,
     payload,
   }),
   removeProductFromCart: (payload) => ({

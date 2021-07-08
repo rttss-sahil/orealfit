@@ -24,7 +24,6 @@ export const Signup = ({ state, dispatch }) => {
         },
         body: JSON.stringify({ email, password }),
       }).then((res) => res.json());
-      console.log(user);
       if (user.message) {
         Promise.all([
           dispatch(actions.addUser(user)),
@@ -33,7 +32,6 @@ export const Signup = ({ state, dispatch }) => {
         Router.push("/");
       } else if (user.error) {
         dispatch(actions.addMessage(user.error));
-        console.log(state.message);
       }
     };
   return (

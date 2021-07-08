@@ -10,7 +10,6 @@ export const More = ({ state, dispatch }) => {
     <div className="more-page">
       <h1>Me and Orealfit</h1>
       <div className="more-page-options">
-        {console.log("usr: ", state.user)}
         <div className="option-item">
           <Link href="/about-us">About Us</Link>
         </div>

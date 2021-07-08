@@ -22,7 +22,6 @@ export const Login = ({ state, dispatch }) => {
         },
         body: JSON.stringify({ email, password }),
       }).then((res) => res.json());
-      console.log(user);
       if (user.message) {
         Promise.all([
           dispatch(actions.addUser(user)),
