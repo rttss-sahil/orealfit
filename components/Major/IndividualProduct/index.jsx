@@ -43,12 +43,22 @@ export const IndividualProduct = ({
         ))}
       <div className="product-page-bottom">
         {!state.wishlist.some((item) => item.id === product.place.id) ? (
-          <div
-            className="add-to-wishlist"
-            onClick={() => addToWishlist(product.place)}
-          >
-            <BsHeart /> WISHLIST
-          </div>
+          state.wishlist.loggedIn ? (
+            <div
+              className="add-to-wishlist"
+              onClick={() => addToWishlist(product.place)}
+            >
+              <BsHeart /> WISHLIST
+            </div>
+          ) : (
+            <Link href="/login">
+              <div className="add-to-wishlist">
+                <>
+                  <BsHeart /> WISHLIST
+                </>
+              </div>
+            </Link>
+          )
         ) : (
           <div
             className="add-to-wishlist"
@@ -58,9 +68,22 @@ export const IndividualProduct = ({
           </div>
         )}
         {!state.cart.some((item) => item.id === product.place.id) ? (
-          <div className="add-to-cart" onClick={() => addToCart(product.place)}>
-            <IoBagAdd /> TO BAG
-          </div>
+          state.wishlist.loggedIn ? (
+            <div
+              className="add-to-cart"
+              onClick={() => addToCart(product.place)}
+            >
+              <IoBagAdd /> ADD TO BAG
+            </div>
+          ) : (
+            <Link href="/login">
+              <div className="add-to-cart">
+                <>
+                  <IoBagAdd /> ADD TO BAG
+                </>
+              </div>
+            </Link>
+          )
         ) : (
           <Link href="/cart">
             <div className="add-to-cart">
