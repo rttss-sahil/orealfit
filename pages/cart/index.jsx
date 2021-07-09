@@ -14,13 +14,13 @@ export const Cart = ({ state, dispatch }) => {
     );
   };
   const price =
-    state.cart.length === 1
+    state.cart && state.cart.length === 1
       ? state.cart[0].price
       : state.cart.reduce(
           (item, now) => Number(item.price) + Number(now.price)
         );
   const regularPrice =
-    state.cart.length === 1
+    state.cart && state.cart.length === 1
       ? state.cart[0].regular_price || Number(state.cart[0].price) + 200
       : state.cart.reduce(
           (item, now) =>
