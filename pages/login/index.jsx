@@ -63,9 +63,9 @@ export const Login = ({ state, dispatch }) => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <div className="forgot-password">
+        {/* <div className="forgot-password">
           <Link href="/forgot-password">Forgot Password ?</Link>
-        </div>
+        </div> */}
         <button type="submit">Login</button>
       </form>
       <div className="instead">

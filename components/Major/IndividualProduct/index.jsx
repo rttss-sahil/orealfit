@@ -42,8 +42,8 @@ export const IndividualProduct = ({
           </div>
         ))}
       <div className="product-page-bottom">
-        {!state.wishlist.some((item) => item.id === product.place.id) ? (
-          state.wishlist.loggedIn ? (
+        {state.user.loggedIn ? (
+          !state.wishlist.some((item) => item.id === product.place.id) ? (
             <div
               className="add-to-wishlist"
               onClick={() => addToWishlist(product.place)}
@@ -51,24 +51,24 @@ export const IndividualProduct = ({
               <BsHeart /> WISHLIST
             </div>
           ) : (
-            <Link href="/login">
-              <div className="add-to-wishlist">
-                <>
-                  <BsHeart /> WISHLIST
-                </>
-              </div>
-            </Link>
+            <div
+              className="add-to-wishlist"
+              onClick={() => removeFromWishlist(product.place)}
+            >
+              <BsHeartFill /> WISHLISTED
+            </div>
           )
         ) : (
-          <div
-            className="add-to-wishlist"
-            onClick={() => removeFromWishlist(product.place)}
-          >
-            <BsHeartFill /> WISHLISTED
-          </div>
+          <Link href="/login">
+            <div className="add-to-wishlist">
+              <>
+                <BsHeart /> WISHLIST
+              </>
+            </div>
+          </Link>
         )}
-        {!state.cart.some((item) => item.id === product.place.id) ? (
-          state.wishlist.loggedIn ? (
+        {state.user.loggedIn ? (
+          !state.cart.some((item) => item.id === product.place.id) ? (
             <div
               className="add-to-cart"
               onClick={() => addToCart(product.place)}
@@ -76,18 +76,18 @@ export const IndividualProduct = ({
               <IoBagAdd /> ADD TO BAG
             </div>
           ) : (
-            <Link href="/login">
+            <Link href="/cart">
               <div className="add-to-cart">
-                <>
-                  <IoBagAdd /> ADD TO BAG
-                </>
+                <IoBagCheck /> GO TO BAG
               </div>
             </Link>
           )
         ) : (
-          <Link href="/cart">
+          <Link href="/login">
             <div className="add-to-cart">
-              <IoBagCheck /> GO TO BAG
+              <>
+                <IoBagAdd /> ADD TO BAG
+              </>
             </div>
           </Link>
         )}

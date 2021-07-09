@@ -67,9 +67,9 @@ export const Signup = ({ state, dispatch }) => {
           />
         </div>
         <button type="submit">Register</button>
-        <div className="forgot-password">
+        {/* <div className="forgot-password">
           <Link href="/forgot-password">Forgot Password ?</Link>
-        </div>
+        </div> */}
       </form>
       <div className="agreement">
         <GiCheckMark />

@@ -16,46 +16,31 @@ const Wishlist = (state = initialState, action) => {
 
     case actionTypes.addProductToWishlist:
       if (!state.some((item) => item.id === action.payload.product.id)) {
-        return fetch(api.apiUrl + "/wishlist/add", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
+        newState = [...state, action.payload.product];
+        fetchWishlist(
+          "add",
+          JSON.stringify({
             product: action.payload.product,
             email: action.payload.email,
-          }),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.message === "OK") {
-              newState = [...state, action.payload];
-              return newState;
-            }
-          });
+          })
+        );
+        return newState;
       }
       return state;
 
     case actionTypes.removeProductFromWishlist:
-      if (state.some((item) => item.id === action.payload.id)) {
-        const message = fetch(api.apiUrl + "/wishlist/remove", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
+      if (state.some((item) => item.id === action.payload.product.id)) {
+        newState = [...state].filter(
+          (item) => item.id !== action.payload.product.id
+        );
+        fetchWishlist(
+          "remove",
+          JSON.stringify({
             product: action.payload.product,
             email: action.payload.email,
-          }),
-        })
-          .then((res) => res.json())
-          .then((data) => data.message);
-        if (message === "OK") {
-          newState = [...state].filter((item) => item.id !== action.payload.id);
-          return newState;
-        } else {
-          return state;
-        }
+          })
+        );
+        return newState;
       }
       return state;
 
@@ -66,6 +51,18 @@ const Wishlist = (state = initialState, action) => {
     default:
       return state;
   }
+};
+
+const fetchWishlist = async (link, body) => {
+  await fetch(api.apiUrl + "/wishlist/" + link, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body,
+  })
+    .then((res) => res.json())
+    .then((data) => data.message);
 };
 
 export default Wishlist;

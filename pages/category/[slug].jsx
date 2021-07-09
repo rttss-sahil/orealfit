@@ -37,8 +37,9 @@ export const ProductListFromCatgory = ({ products, state, dispatch }) => {
         <h2>Loading...</h2>
       ) : (
         <ul className="products-all">
-          {products.category.map((product) => (
+          {products.category.map((product, index) => (
             <Product
+              key={index}
               addToWishlist={addToWishlist}
               removeFromWishlist={removeFromWishlist}
               product={product}

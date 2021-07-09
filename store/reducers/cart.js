@@ -16,47 +16,34 @@ const Cart = (state = initialState, action) => {
 
     case actionTypes.addProductToCart:
       if (!state.some((item) => item.id === action.payload.product.id)) {
-        const message = fetch(api.apiUrl + "/cart/add", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
+        newState = [...state, action.payload.product];
+        fetchCart(
+          "add",
+          JSON.stringify({
             product: action.payload.product,
             email: action.payload.email,
-          }),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.message === "OK") {
-              newState = [...state, action.payload];
-            }
-          });
+          })
+        );
         return newState;
       }
       return state;
 
     case actionTypes.removeProductFromCart:
-      if (state.some((item) => item.id === action.payload.id)) {
-        const message = fetch(api.apiUrl + "/cart/remove", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
+      console.log(action.payload);
+      if (state.some((item) => item.id === action.payload.product.id)) {
+        newState = [...state].filter(
+          (item) => item.id !== action.payload.product.id
+        );
+        fetchCart(
+          "remove",
+          JSON.stringify({
             product: action.payload.product,
             email: action.payload.email,
-          }),
-        })
-          .then((res) => res.json())
-          .then((data) => data.message);
-        if (message === "OK") {
-          newState = [...state].filter((item) => item.id !== action.payload.id);
-        } else {
-          return state;
-        }
+          })
+        );
+        return newState;
       }
-      return newState;
+      return state;
 
     case actionTypes.removeAllFromCart:
       newState = [];
@@ -65,6 +52,20 @@ const Cart = (state = initialState, action) => {
     default:
       return state;
   }
+};
+
+const fetchCart = async (link, body) => {
+  console.log("here");
+  await fetch(api.apiUrl + "/cart/" + link, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body,
+  })
+    .then((res) => res.json())
+    .then((data) => data.message);
+  console.log("here");
 };
 
 export default Cart;

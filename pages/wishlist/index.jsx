@@ -8,7 +8,12 @@ import Product from "../../components/Major/Product";
 
 export const Wishlist = ({ state, dispatch }) => {
   const removeFromWishlist = (product) => {
-    dispatch(actions.removeProductFromWishlist(product));
+    dispatch(
+      actions.removeProductFromWishlist({
+        product,
+        email: state.user.user.email,
+      })
+    );
   };
   return (
     <div className="wishlist-page">

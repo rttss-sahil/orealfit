@@ -25,8 +25,9 @@ export const Product = ({
               "%"
             : ""}
         </div>
-        {!state.wishlist.some((item) => item.id === product.id) ? (
-          state.user.loggeedIn ? (
+        {state.user.loggedIn ? (
+          state.wishlist &&
+          !state.wishlist.some((item) => item.id === product.id) ? (
             <div
               className="products-page-item-wishlist"
               onClick={() => addToWishlist(product)}
@@ -34,19 +35,19 @@ export const Product = ({
               <BsHeart />
             </div>
           ) : (
-            <div className="products-page-item-wishlist">
-              <Link href="/login">
-                <BsHeart />
-              </Link>
+            <div
+              className="products-page-item-wishlist"
+              onClick={() => removeFromWishlist(product)}
+            >
+              <BsHeartFill />
             </div>
           )
         ) : (
-          <div
-            className="products-page-item-wishlist"
-            onClick={() => removeFromWishlist(product)}
-          >
-            <BsHeartFill />
-          </div>
+          <Link href="/login">
+            <div className="products-page-item-wishlist">
+              <BsHeart />
+            </div>
+          </Link>
         )}
       </div>
       <Link href={`/product/${product.id}`}>
