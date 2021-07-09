@@ -5,10 +5,12 @@ const actionTypes = {
   addProductToWishlist: "ADD_PRODUCT_TO_WISHLIST",
   addDirectlyToWishlist: "ADD_DIRECTLY_TO_WISHLIST",
   removeProductFromWishlist: "REMOVE_PRODUCT_FROM_WISHLIST",
+  removeAllFromWishlist: "REMOVE_ALL_FROM_WISHLIST",
 
   addProductToCart: "ADD_PRODUCT_TO_CART",
   addDirectlyToCart: "ADD_DIRECTLY_TO_CART",
   removeProductFromCart: "REMOVE_PRODUCT_FROM_CART",
+  removeAllFromCart: "REMOVE_ALL_FROM_CART",
 
   addUser: "ADD_USER",
   removeUser: "REMOVE_USER",

@@ -50,7 +50,6 @@ const Wishlist = (state = initialState, action) => {
         })
           .then((res) => res.json())
           .then((data) => data.message);
-        console.log(message);
         if (message === "OK") {
           newState = [...state].filter((item) => item.id !== action.payload.id);
           return newState;
@@ -59,6 +58,10 @@ const Wishlist = (state = initialState, action) => {
         }
       }
       return state;
+
+    case actionTypes.removeAllFromWishlist:
+      newState = [];
+      return newState;
 
     default:
       return state;

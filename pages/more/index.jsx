@@ -21,7 +21,9 @@ export const More = ({ state, dispatch }) => {
               onClick={() => {
                 Promise.all[
                   (dispatch(actions.removeUser()),
-                  dispatch(actions.addMessage("Successfully Logged Out.")))
+                  dispatch(actions.addMessage("Successfully Logged Out.")),
+                  dispatch(actions.removeAllFromCart()),
+                  dispatch(actions.removeAllFromWishlist()))
                 ];
               }}
             >

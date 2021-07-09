@@ -50,13 +50,16 @@ const Cart = (state = initialState, action) => {
         })
           .then((res) => res.json())
           .then((data) => data.message);
-        console.log(message);
         if (message === "OK") {
           newState = [...state].filter((item) => item.id !== action.payload.id);
         } else {
           return state;
         }
       }
+      return newState;
+
+    case actionTypes.removeAllFromCart:
+      newState = [];
       return newState;
 
     default:

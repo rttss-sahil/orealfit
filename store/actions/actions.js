@@ -22,6 +22,10 @@ const actions = {
     type: actionTypes.removeProductFromWishlist,
     payload,
   }),
+  removeAllFromWishlist: (payload) => ({
+    type: actionTypes.removeAllFromWishlist,
+    payload,
+  }),
 
   addProductToCart: (payload) => ({
     type: actionTypes.addProductToCart,
@@ -33,6 +37,10 @@ const actions = {
   }),
   removeProductFromCart: (payload) => ({
     type: actionTypes.removeProductFromCart,
+    payload,
+  }),
+  removeAllFromCart: (payload) => ({
+    type: actionTypes.removeAllFromCart,
     payload,
   }),
 
