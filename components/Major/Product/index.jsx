@@ -25,6 +25,7 @@ export const Product = ({
               "%"
             : ""}
         </div>
+        {console.log(state.wishlist)}
         {!state.wishlist.some((item) => item.id === product.id) ? (
           <div
             className="products-page-item-wishlist"

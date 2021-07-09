@@ -12,13 +12,22 @@ export const Product = ({ state, dispatch, product }) => {
       setLoading(false);
     },
     addToCart = (product) => {
-      dispatch(actions.addProductToCart(product));
+      dispatch(
+        actions.addProductToCart({ product, email: state.user.user.email })
+      );
     },
     addToWishlist = (product) => {
-      dispatch(actions.addProductToWishlist(product));
+      dispatch(
+        actions.addProductToWishlist({ product, email: state.user.user.email })
+      );
     },
     removeFromWishlist = (product) => {
-      dispatch(actions.removeProductFromWishlist(product));
+      dispatch(
+        actions.removeProductFromWishlist({
+          product,
+          email: state.user.user.email,
+        })
+      );
     };
   React.useEffect(() => {
     if (product.category) {

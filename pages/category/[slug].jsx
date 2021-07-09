@@ -13,10 +13,17 @@ export const ProductListFromCatgory = ({ products, state, dispatch }) => {
       setLoading(false);
     },
     removeFromWishlist = (product) => {
-      dispatch(actions.removeProductFromWishlist(product));
+      dispatch(
+        actions.removeProductFromWishlist({
+          product,
+          email: state.user.user.email,
+        })
+      );
     },
     addToWishlist = (product) => {
-      dispatch(actions.addProductToWishlist(product));
+      dispatch(
+        actions.addProductToWishlist({ product, email: state.user.user.email })
+      );
     };
   React.useEffect(() => {
     if (products.category) {
