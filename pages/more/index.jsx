@@ -31,7 +31,11 @@ export const More = ({ state, dispatch }) => {
             </div>
           )}
         </div>
-        {/* <div className="option-item"></div> */}
+        <div className="option-item">
+          {state.user.loggedIn && (
+            <Link href="/user/addresses">My Addresses</Link>
+          )}
+        </div>
         {/* <div className="option-item"></div> */}
         {/* <div className="option-item"></div> */}
         {/* <div className="option-item"></div> */}

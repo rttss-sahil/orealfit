@@ -1,0 +1,103 @@
+.addresses-all {
+  padding: 2rem;
+  background-color: white;
+  box-shadow:
+    -5px -5px 5px rgba(0, 0, 0, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.addresses-all * {
+  text-align: center;
+}
+
+
+.addresses-all a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 2rem;
+  padding: 1.5rem 4rem;
+  align-self: center;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgb(0, 110, 255);
+  box-shadow:
+    -5px -5px 5px rgba(0, 0, 0, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.addresses-all a:hover {
+  background-color: rgb(0, 81, 255);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.add-address-page form {
+  margin: 0 auto;
+  width: 80%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow:
+    -5px -5px 5px rgba(0, 0, 0, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 5rem;
+}
+
+
+.add-address-page form .input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.add-address-page form .input-group input,
+.add-address-page form .input-group select {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  outline: none;
+}
+
+
+.add-address-page form button {
+  color: white;
+  cursor: pointer;
+  margin-top: 2rem;
+  padding: 1.5rem 4rem;
+  align-self: center;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgb(0, 110, 255);
+  box-shadow:
+    -5px -5px 5px rgba(0, 0, 0, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.add-address-page form button:hover {
+  background-color: rgb(0, 81, 255);
+}

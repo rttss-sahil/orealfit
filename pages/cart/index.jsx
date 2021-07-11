@@ -7,7 +7,6 @@ import actions from "../../store/actions/actions";
 import CartProduct from "../../components/Major/CartProduct";
 
 export const Cart = ({ state, dispatch }) => {
-  // const [allCount, setAllCount] = React.useState(state.cart.items);
   const removeFromCart = (product) => {
     dispatch(
       actions.removeProductFromCart({ product, email: state.user.user.email })

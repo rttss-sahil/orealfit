@@ -17,6 +17,7 @@ import "../styles/Alert.css";
 import "../styles/More.css";
 import "../styles/ForgotPassword.css";
 import "../styles/UserForm.css";
+import "../styles/Addresses.css";
 
 import "../styles/404.css";
 import "../styles/CartProduct.css";

@@ -75,6 +75,7 @@ export const Signup = ({ state, dispatch }) => {
           <input
             type="password"
             placeholder="pasSw0rD@786"
+            required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             minLength={8}
