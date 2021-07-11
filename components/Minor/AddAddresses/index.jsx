@@ -15,20 +15,25 @@ export const index = ({ state, dispatch, link }) => {
     [territory, setTerritory] = React.useState([]);
   const submitHandler = (e) => {
     e.preventDefault();
-    const id = state.addresses.length + 1;
-    dispatch(
-      actions.addNewAddress({
-        id,
-        name,
-        street,
-        landmark,
-        pincode,
-        mobile,
-        city,
-        territory,
-        email: state.user.user.email,
-      })
-    );
+    if (mobile.length !== 10) {
+      dispatch(actions.addMessage("Mobile characters should be of length 10"));
+    } else {
+      const id = state.addresses.length + 1;
+      dispatch(
+        actions.addNewAddress({
+          id,
+          name,
+          street,
+          landmark,
+          pincode,
+          mobile,
+          city,
+          territory,
+          email: state.user.user.email,
+        })
+      );
+      Router.push(link || "/user/addresses");
+    }
   };
   const pincodeHandler = async (e) => {
     setPincode(e.target.value);
@@ -55,7 +60,6 @@ export const index = ({ state, dispatch, link }) => {
     <form
       onSubmit={(e) => {
         submitHandler(e);
-        Router.push(link || "/user/addresses");
       }}
     >
       <div className="input-group">
@@ -63,7 +67,7 @@ export const index = ({ state, dispatch, link }) => {
         <input
           type="text"
           placeholder="Aryan Kumar"
-          maxlength={20}
+          maxLength={20}
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
