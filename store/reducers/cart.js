@@ -29,7 +29,6 @@ const Cart = (state = initialState, action) => {
       return state;
 
     case actionTypes.removeProductFromCart:
-      console.log(action.payload);
       if (state.some((item) => item.id === action.payload.product.id)) {
         newState = [...state].filter(
           (item) => item.id !== action.payload.product.id
@@ -55,7 +54,6 @@ const Cart = (state = initialState, action) => {
 };
 
 const fetchCart = async (link, body) => {
-  console.log("here");
   await fetch(api.apiUrl + "/cart/" + link, {
     method: "POST",
     headers: {
@@ -65,7 +63,6 @@ const fetchCart = async (link, body) => {
   })
     .then((res) => res.json())
     .then((data) => data.message);
-  console.log("here");
 };
 
 export default Cart;

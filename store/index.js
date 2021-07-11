@@ -7,6 +7,8 @@ import categories from "./reducers/categories";
 import user from "./reducers/user";
 import message from "./reducers/message";
 import addresses from "./reducers/addresses";
+import checkout from "./reducers/checkout";
+import shipments from "./reducers/shipments";
 
 const reducer = combineReducers({
   product,
@@ -17,6 +19,8 @@ const reducer = combineReducers({
   user,
   message,
   addresses,
+  checkout,
+  shipments,
 });
 
 const store = createStore(reducer);

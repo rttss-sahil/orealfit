@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import Link from "next/link";
+import Router from "next/router";
 
 import actions from "../../store/actions/actions";
 import CartProduct from "../../components/Major/CartProduct";
@@ -81,7 +82,17 @@ export const Cart = ({ state, dispatch }) => {
       </div>
       {state.user.loggedIn && state.cart.length > 0 && (
         <div className="place-order">
-          <button>Checkout</button>
+          <button
+            onClick={() => {
+              Promise.all([
+                dispatch(actions.addProductToCheckout(state.cart)),
+                dispatch(actions.addPaymentToCheckout(price)),
+              ]);
+              Router.push("/checkout/select-address");
+            }}
+          >
+            Checkout
+          </button>
         </div>
       )}
     </div>

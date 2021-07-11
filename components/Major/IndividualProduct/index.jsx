@@ -71,7 +71,7 @@ export const IndividualProduct = ({
           !state.cart.some((item) => item.id === product.place.id) ? (
             <div
               className="add-to-cart"
-              onClick={() => addToCart(product.place)}
+              onClick={() => addToCart({ ...product.place, qty: 1 })}
             >
               <IoBagAdd /> ADD TO BAG
             </div>

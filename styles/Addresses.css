@@ -1,5 +1,6 @@
 .addresses-all {
-  padding: 2rem;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
   background-color: white;
   box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
@@ -9,16 +10,12 @@
   justify-content: center;
 }
 
-.addresses-all * {
-  text-align: center;
-}
-
-
 .addresses-all a {
+  text-align: center;
+  margin: 0 auto;
   text-decoration: none;
   color: white;
   cursor: pointer;
-  margin-top: 2rem;
   padding: 1.5rem 4rem;
   align-self: center;
   border-radius: 20px;
@@ -34,7 +31,11 @@
 
 }
 
-
+.address-item {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+}
 
 
 

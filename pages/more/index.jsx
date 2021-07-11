@@ -11,8 +11,16 @@ export const More = ({ state, dispatch }) => {
       <h1>Me and Orealfit</h1>
       <div className="more-page-options">
         <div className="option-item">
-          <Link href="/about-us">About Us</Link>
+          <Link href="/about-us">About Orealfit</Link>
         </div>
+        <div className="option-item">
+          {state.user.loggedIn && (
+            <Link href="/user/addresses">My Addresses</Link>
+          )}
+        </div>
+        {/* <div className="option-item"></div> */}
+        {/* <div className="option-item"></div> */}
+        {/* <div className="option-item"></div> */}
         <div className="option-item account">
           {!state.user.loggedIn ? (
             <Link href="/login">SignIn / SignUp</Link>
@@ -31,14 +39,6 @@ export const More = ({ state, dispatch }) => {
             </div>
           )}
         </div>
-        <div className="option-item">
-          {state.user.loggedIn && (
-            <Link href="/user/addresses">My Addresses</Link>
-          )}
-        </div>
-        {/* <div className="option-item"></div> */}
-        {/* <div className="option-item"></div> */}
-        {/* <div className="option-item"></div> */}
       </div>
     </div>
   );

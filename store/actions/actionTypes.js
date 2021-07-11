@@ -25,6 +25,14 @@ const actionTypes = {
   addDirectlyToAddresses: "ADDRESSES",
   removeAddress: "REMOVE_ADDRESS",
   // removeAllFromAddresses: "REMOVE_ALL_FROM_Addresses",
+
+  addAddressToCheckout: "ADD_ADDRESS_TO_CHECKOUT",
+  addPaymentToCheckout: "ADD_PAYMENT_TO_CHECKOUT",
+  addProductToCheckout: "ADD_PRODUCT_TO_CHECKOUT",
+
+  addNewShipment: "ADD_NEW_SHIPMENT",
+  trackShipment: "TRACK_SHIPMENT",
+  removeShipment: "REMOVE_SHIPMENT",
 };
 
 export default actionTypes;

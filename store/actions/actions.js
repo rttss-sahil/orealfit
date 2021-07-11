@@ -5,7 +5,7 @@ const actions = {
     type: actionTypes.addProductToPage,
     payload,
   }),
-  removeProductFromPage: (paylaod) => ({
+  removeProductFromPage: (payload) => ({
     type: actionTypes.removeProductFromPage,
     payload,
   }),
@@ -80,6 +80,32 @@ const actions = {
   }),
   addDirectlyToAddresses: (payload) => ({
     type: actionTypes.addDirectlyToAddresses,
+    payload,
+  }),
+
+  addAddressToCheckout: (payload) => ({
+    type: actionTypes.addAddressToCheckout,
+    payload,
+  }),
+  addPaymentToCheckout: (payload) => ({
+    type: actionTypes.addPaymentToCheckout,
+    payload,
+  }),
+  addProductToCheckout: (payload) => ({
+    type: actionTypes.addProductToCheckout,
+    payload,
+  }),
+
+  addNewShipment: (payload) => ({
+    type: actionTypes.addNewShipment,
+    payload,
+  }),
+  trackShipment: (payload) => ({
+    type: actionTypes.trackShipment,
+    payload,
+  }),
+  removeShipment: (payload) => ({
+    type: actionTypes.removeShipment,
     payload,
   }),
 };

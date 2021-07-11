@@ -20,6 +20,15 @@
   text-decoration: underline;
 }
 
+.more-page-options .option-item.account {
+  position: fixed;
+  bottom: 6rem;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .more-page-options .option-item.account div {
   cursor: pointer;
   color: blue;
