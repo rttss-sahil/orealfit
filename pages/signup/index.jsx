@@ -6,6 +6,7 @@ import Router from "next/router";
 import api from "../../lib/api";
 
 import { FaUserAlt, FaUnlock } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 import { BsExclamation } from "react-icons/bs";
 import { GiCheckMark } from "react-icons/gi";
 
@@ -13,6 +14,7 @@ import actions from "../../store/actions/actions";
 
 export const Signup = ({ state, dispatch }) => {
   const [email, setEmail] = React.useState(""),
+    [name, setName] = React.useState(""),
     // [phone, setPhone] = React.useState(""),
     [password, setPassword] = React.useState(""),
     submitLogin = async (e) => {
@@ -47,6 +49,18 @@ export const Signup = ({ state, dispatch }) => {
         </div>
         <div className="input-group">
           <FaUserAlt />
+          <input
+            type="text"
+            required
+            placeholder="John Doe"
+            autoComplete="name"
+            value={name}
+            maxLength={20}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div className="input-group">
+          <FiMail />
           <input
             type="email"
             required

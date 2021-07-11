@@ -69,6 +69,19 @@ const actions = {
     type: actionTypes.removeError,
     payload,
   }),
+
+  addNewAddress: (payload) => ({
+    type: actionTypes.addNewAddress,
+    payload,
+  }),
+  removeAddress: (payload) => ({
+    type: actionTypes.removeAddress,
+    payload,
+  }),
+  addDirectlyToAddresses: (payload) => ({
+    type: actionTypes.addDirectlyToAddresses,
+    payload,
+  }),
 };
 
 export default actions;

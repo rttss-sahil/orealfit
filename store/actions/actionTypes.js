@@ -20,6 +20,11 @@ const actionTypes = {
 
   addError: "ADD_ERROR",
   removeError: "REMOVE_ERROR",
+
+  addNewAddress: "ADD_NEW_ADDRESS",
+  addDirectlyToAddresses: "ADDRESSES",
+  removeAddress: "REMOVE_ADDRESS",
+  // removeAllFromAddresses: "REMOVE_ALL_FROM_Addresses",
 };
 
 export default actionTypes;

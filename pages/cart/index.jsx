@@ -17,17 +17,15 @@ export const Cart = ({ state, dispatch }) => {
     state.cart.length > 0 &&
     (state.cart.length === 1
       ? state.cart[0].price
-      : state.cart.reduce(
-          (item, now) => Number(item.price) + Number(now.price)
-        ));
+      : state.cart.reduce((total, item) => total + Number(item.price), 0));
   const regularPrice =
     state.cart.length > 0 &&
     (state.cart.length === 1
       ? state.cart[0].regular_price || Number(state.cart[0].price) + 200
       : state.cart.reduce(
-          (item, now) =>
-            (Number(item.regular_price) || Number(item.price) + 200) +
-            (Number(now.regular_price) || Number(now.price) + 200)
+          (total, item) =>
+            total + Number(item.regular_price || Number(item.price) + 200),
+          0
         ));
   return (
     <div className="cart-page">
@@ -82,9 +80,11 @@ export const Cart = ({ state, dispatch }) => {
           </div>
         )}
       </div>
-      <div className="place-order">
-        <button>Place Order</button>
-      </div>
+      {state.user.loggedIn && state.cart.length > 0 && (
+        <div className="place-order">
+          <button>Checkout</button>
+        </div>
+      )}
     </div>
   );
 };

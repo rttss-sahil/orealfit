@@ -47,7 +47,16 @@ function MyApp({ Component, pageProps }) {
         },
         body: JSON.stringify({ email: localStorage.getItem("email") }),
       }).then((res) => res.json());
+
       const cartItems = await fetch(api.apiUrl + "/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: localStorage.getItem("email") }),
+      }).then((res) => res.json());
+
+      const addressItem = await fetch(api.apiUrl + "/addresses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -66,6 +75,7 @@ function MyApp({ Component, pageProps }) {
         ),
         store.dispatch(actions.addDirectlyToCart(cartItems.cart)),
         store.dispatch(actions.addDirectlyToWishlist(wishlistItems.wishlist)),
+        store.dispatch(actions.addDirectlyToAddresses(addressItem.address)),
       ]);
     }
   });
