@@ -15,7 +15,6 @@ import actions from "../../store/actions/actions";
 export const Signup = ({ state, dispatch }) => {
   const [email, setEmail] = React.useState(""),
     [name, setName] = React.useState(""),
-    // [phone, setPhone] = React.useState(""),
     [password, setPassword] = React.useState(""),
     submitLogin = async (e) => {
       e.preventDefault();
@@ -24,7 +23,7 @@ export const Signup = ({ state, dispatch }) => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ name, email, password }),
       }).then((res) => res.json());
       if (user.message) {
         Promise.all([
