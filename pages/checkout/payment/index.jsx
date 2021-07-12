@@ -21,7 +21,7 @@ function loadScript(src) {
 
 function Payment({ state, dispatch }) {
   const [name, setName] = useState("Consumer");
-  const live = true;
+  const live = false;
 
   async function displayRazorpay() {
     const res = await loadScript(
