@@ -5,9 +5,9 @@ import Image from "next/image";
 import { connect } from "react-redux";
 
 import AwesomeSlider from "react-awesome-slider";
-import slider1 from "../../../public/img/slider/img1.jpg";
-import slider2 from "../../../public/img/slider/img2.jpg";
-import slider3 from "../../../public/img/slider/img3.jpg";
+import slider1 from "../../../public/img/slider/slideshow-1.jpg";
+import slider2 from "../../../public/img/slider/slideshow-2.jpg";
+import slider3 from "../../../public/img/slider/slideshow-3.jpg";
 
 import sportSupplements from "../../../public/img/shop-by-categories/sport-supplements.webp";
 import healthyFood from "../../../public/img/shop-by-categories/healthy-food.webp";
@@ -23,13 +23,13 @@ export const HomePage = ({ state, dispatch }) => {
       <div className="slider-all">
         <AwesomeSlider>
           <div className="slider-item">
-            <Image src={slider1} height="300" width="300" />
+            <Image src={slider1} />
           </div>
           <div className="slider-item">
-            <Image src={slider2} height="300" width="300" />
+            <Image src={slider2} />
           </div>
           <div className="slider-item">
-            <Image src={slider3} height="300" width="300" />
+            <Image src={slider3} />
           </div>
         </AwesomeSlider>
 
@@ -45,13 +45,13 @@ export const HomePage = ({ state, dispatch }) => {
         <div className="shop-by-categories-all">
           <div className="shop-by-categories-item">
             <Image src={sportSupplements} objectFit="fill" />
-            <Link href="/">Sports Supplements</Link>
-            <Link href="/">Start Shopping</Link>
+            <Link href="/">Proteins</Link>
+            <Link href="/category/">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
             <Image src={healthyFood} objectFit="fill" />
-            <Link href="/">Healthy Food</Link>
-            <Link href="/">Start Shopping</Link>
+            <Link href="/">Gainers</Link>
+            <Link href="/category">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
             <Image src={vitaminAndHealth} objectFit="fill" />
