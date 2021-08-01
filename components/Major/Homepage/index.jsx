@@ -32,14 +32,15 @@ export const HomePage = ({ state, dispatch }) => {
             <Image src={slider3} />
           </div>
         </AwesomeSlider>
-
-        {!state.user.loggedIn && (
-          <>
-            <p>Become a member of Orealfit,</p>
-            <Link href="/signup">Join Us</Link>
-          </>
-        )}
       </div>
+
+      {!state.user.loggedIn && (
+        <div className="log-yourself-in">
+          <p>Already a member, or new here?</p>
+          <p>Whatever your reason, </p>
+          <Link href="/login">Login / Register</Link>
+        </div>
+      )}
       <div className="shop-by-categories">
         <h2>Shop by Categories</h2>
         <div className="shop-by-categories-all">
@@ -54,13 +55,18 @@ export const HomePage = ({ state, dispatch }) => {
             <Link href="/category">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
-            <Image src={vitaminAndHealth} objectFit="fill" />
-            <Link href="/">Vitamin And Health</Link>
+            <Image src={sportswearAndAccessories} objectFit="fill" />
+            <Link href="/">Pre / Post Workout</Link>
             <Link href="/">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
             <Image src={sportswearAndAccessories} objectFit="fill" />
-            <Link href="/">Sports Wear And Accessories</Link>
+            <Link href="/">Fat Loss</Link>
+            <Link href="/">Start Shopping</Link>
+          </div>
+          <div className="shop-by-categories-item">
+            <Image src={vitaminAndHealth} objectFit="fill" />
+            <Link href="/">Vitamins And Essential</Link>
             <Link href="/">Start Shopping</Link>
           </div>
         </div>
