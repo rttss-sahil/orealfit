@@ -37,6 +37,7 @@ export const ProductListFromCatgory = ({ products, state, dispatch }) => {
         <h2>Loading...</h2>
       ) : (
         <ul className="products-all">
+          {console.log(products)}
           {products.category.map((product, index) => (
             <Product
               key={index}

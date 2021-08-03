@@ -39,3 +39,22 @@
 .more-page-options .option-item.account div:hover {
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+
+.terms-and-conditions-page div,
+.return-replacement-policy-page div,
+.privacy-policy-page div {
+  box-shadow:
+    -5px -5px 5px rgba(0, 0, 0, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  padding: 2rem;
+  margin: 0 2rem;
+}

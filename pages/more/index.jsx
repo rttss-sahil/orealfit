@@ -13,31 +13,42 @@ export const More = ({ state, dispatch }) => {
         <div className="option-item">
           <Link href="/about-us">About Orealfit</Link>
         </div>
-        <div className="option-item">
-          {state.user.loggedIn && (
+        {state.user.loggedIn && (
+          <div className="option-item">
             <Link href="/user/addresses">My Addresses</Link>
-          )}
-        </div>
+          </div>
+        )}
         {/* <div className="option-item"></div> */}
         {/* <div className="option-item"></div> */}
         {/* <div className="option-item"></div> */}
-        <div className="option-item account">
-          {!state.user.loggedIn ? (
+        {!state.user.loggedIn ? (
+          <div className="option-item account">
             <Link href="/login">SignIn / SignUp</Link>
-          ) : (
-            <div
-              onClick={() => {
-                Promise.all[
-                  (dispatch(actions.removeUser()),
-                  dispatch(actions.addMessage("Successfully Logged Out.")),
-                  dispatch(actions.removeAllFromCart()),
-                  dispatch(actions.removeAllFromWishlist()))
-                ];
-              }}
-            >
-              Logout
-            </div>
-          )}
+          </div>
+        ) : (
+          <div
+            onClick={() => {
+              Promise.all[
+                (dispatch(actions.removeUser()),
+                dispatch(actions.addMessage("Successfully Logged Out.")),
+                dispatch(actions.removeAllFromCart()),
+                dispatch(actions.removeAllFromWishlist()))
+              ];
+            }}
+          >
+            Logout
+          </div>
+        )}
+        <div className="option-item">
+          <Link href="/terms-and-conditions">Terms and Conditions</Link>
+        </div>
+        <div className="option-item">
+          <Link href="/return-replacement-policy">
+            Returns / Replacement Policy
+          </Link>
+        </div>
+        <div className="option-item">
+          <Link href="/privacy-policy">Privacy Policy</Link>
         </div>
       </div>
     </div>

@@ -14,12 +14,25 @@ import healthyFood from "../../../public/img/shop-by-categories/healthy-food.web
 import vitaminAndHealth from "../../../public/img/shop-by-categories/vitamins-and-health.webp";
 import sportswearAndAccessories from "../../../public/img/shop-by-categories/sportswear-and-accessories.webp";
 
+import bpi from "../../../public/img/logos/bpi.jpg";
+import cellucor from "../../../public/img/logos/cellucor.png";
+import klev from "../../../public/img/logos/klev.png";
+import mhp from "../../../public/img/logos/mhp.jpg";
+import need from "../../../public/img/logos/need.png";
+import nutrex from "../../../public/img/logos/nutrex.png";
+import pureNutrition from "../../../public/img/logos/pure-nutrition.jpg";
+import reload from "../../../public/img/logos/reload.jpg";
+import rule1 from "../../../public/img/logos/rule1.jpg";
+import scivation from "../../../public/img/logos/scivation.jpg";
+import ssan from "../../../public/img/logos/Ssan.png";
+import sunline from "../../../public/img/logos/sunline.jpg";
+
 import topSellers from "../../../public/json/top-sellers.json";
 
 export const HomePage = ({ state, dispatch }) => {
   return (
     <div className="home-page">
-      <h1>HomePage</h1>
+      <h1>Home</h1>
       <div className="slider-all">
         <AwesomeSlider>
           <div className="slider-item">
@@ -83,6 +96,29 @@ export const HomePage = ({ state, dispatch }) => {
               <div className="bottom">₹{product.price}</div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="logos">
+        <h2>Featured Brands</h2>
+        <div className="logo-images">
+          <div className="logo-row">
+            <Image src={bpi} />
+            <Image src={cellucor} />
+            <Image src={pureNutrition} />
+            <Image src={mhp} />
+          </div>
+          <div className="logo-row">
+            <Image src={need} />
+            <Image src={nutrex} />
+            <Image src={klev} />
+            <Image src={reload} />
+          </div>
+          <div className="logo-row">
+            <Image src={scivation} />
+            <Image src={rule1} />
+            <Image src={ssan} />
+            <Image src={sunline} />
+          </div>
         </div>
       </div>
     </div>

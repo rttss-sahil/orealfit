@@ -8,6 +8,7 @@
 }
 
 .categories-all {
+  background-color: rgba(205, 205, 205, 0.01);
   position: relative;
   box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
@@ -26,6 +27,8 @@
   background-color: white;
   padding: 10px 1rem;
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .categories-all .category.active .category-heading {
@@ -55,6 +58,7 @@
   margin-left: -40%;
   color: rgb(0, 109, 109);
   text-align: left;
+  margin-bottom: 1rem;
 }
 
 .categories-all .category .category-list li {

@@ -43,10 +43,10 @@ export const Category = ({ state }) => {
               <Link href="/category/all-proteins">All Proteins</Link>
             </li> */}
             <li>
-              <Link href="/category/whey-proteins">Whey Protein</Link>
+              <Link href="/category/whey-protein">Whey Protein</Link>
             </li>
             <li>
-              <Link href="/category/whey-protein-isolate">
+              <Link href="/category/whey-proteins-isolate">
                 Whey Protein Isloate
               </Link>
             </li>
