@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { connect } from "react-redux";
 
+import Product from '../../Major/Product';
+
 import AwesomeSlider from "react-awesome-slider";
 import slider1 from "../../../public/img/slider/slideshow-1.jpg";
 import slider2 from "../../../public/img/slider/slideshow-2.jpg";
@@ -28,8 +30,22 @@ import ssan from "../../../public/img/logos/Ssan.png";
 import sunline from "../../../public/img/logos/sunline.jpg";
 
 import topSellers from "../../../public/json/top-sellers.json";
+import actions from "../../../store/actions/actions";
 
 export const HomePage = ({ state, dispatch }) => {
+  const removeFromWishlist = (product) => {
+    dispatch(
+      actions.removeProductFromWishlist({
+        product,
+        email: state.user.user.email,
+      })
+    );
+  },
+  addToWishlist = (product) => {
+    dispatch(
+      actions.addProductToWishlist({ product, email: state.user.user.email })
+    );
+  };
   return (
     <div className="home-page">
       <h1>Home</h1>
@@ -87,16 +103,24 @@ export const HomePage = ({ state, dispatch }) => {
       <div className="top-sellers">
         <h2>Top Sellers</h2>
         <div className="top-sellers-all">
+            {/* <Link href={`/product/${product.id}`} key={product.id}>
+            <div className="top-sellers-item" > */}
           {topSellers.map((product) => (
-            <div className="top-sellers-item" key={product.id}>
-              <div>
-                <Image src={product.images[0].src} height={200} width={200} />
-              </div>
-              <p>{product.name}</p>
-              <div className="bottom">₹{product.price}</div>
-            </div>
+            <Product
+            product={product}
+            key={product.id}
+            addToWishlist={addToWishlist}
+            removeFromWishlist={removeFromWishlist}
+            />
           ))}
         </div>
+              {/* <div>
+                <Image src={product.images[0].src} height={150} width={150} />
+              </div>
+              <p>{product.name}</p>
+              <div className="bottom">₹{product.price}</div> */}
+            {/* </div> */}
+            {/* </Link> */}
       </div>
       <div className="logos">
         <h2>Featured Brands</h2>
