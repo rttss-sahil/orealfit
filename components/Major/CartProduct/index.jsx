@@ -9,7 +9,6 @@ export const CartProduct = ({ state, dispatch, product, removeFromCart }) => {
   const [quantity, setQuantity] = React.useState(1);
   return (
     <div className="cart-page-item" key={product.id}>
-    {console.log(product.selectedAttributes)}
       <div className="item-top">
         <div className="item-top-left">
           <p>{product.name}</p>
@@ -49,7 +48,14 @@ export const CartProduct = ({ state, dispatch, product, removeFromCart }) => {
             <>
               <label>Quantity: </label>
               <select defaultValue={product.quantity} onChange={e => {setQuantity(e.target.value);
-              Promise.all([dispatch(actions.removeProductFromCart(product)), dispatch(actions.addProductToCart({product: {...product, quantity}, email: state.user.user.email}))])}}>
+              Promise.all([
+                dispatch(actions.removeProductFromCart({product})), 
+                dispatch(actions.addProductToCart(
+                {
+                  product: {...product, quantity},
+                   email: state.user.user.email
+                }
+                   ))])}}>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>

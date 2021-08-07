@@ -16,8 +16,8 @@ export const Cart = ({ state, dispatch }) => {
   const price =
     state.cart.length > 0 &&
     (state.cart.length === 1
-      ? state.cart[0].price * state.cart[0].quantity
-      : state.cart.reduce((total, item) => total + Number(item.price), 0));
+      ? state.cart[0].price * (state.cart[0].quantity || 1)
+      : state.cart.reduce((total, item) => total + Number(item.price * (item.quantity || 1)), 0));
   const regularPrice =
     state.cart.length > 0 &&
     (state.cart.length === 1
@@ -58,10 +58,8 @@ export const Cart = ({ state, dispatch }) => {
             <h2>Price Details</h2>
             <div className="price">
               <p>
-                Price (
-                {state.cart.length +
-                  (state.cart.length == 1 ? " item" : " items")}
-                )
+                Price 
+                
               </p>
               <p>
                 ₹{" "}
