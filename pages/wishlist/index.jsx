@@ -40,10 +40,14 @@ export const Wishlist = ({ state, dispatch }) => {
           </div>
         )}
       </div>
+      {state.user.loggedIn && (
       <div className="wishlist-shop-more">
+      <p>
         Join millions of Orealfit memebers
+      </p>
         <Link href="/category">Continue Shopping</Link>
       </div>
+      )}
     </div>
   );
 };

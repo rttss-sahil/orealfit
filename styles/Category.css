@@ -1,3 +1,4 @@
+
 .category-page {
   position: absolute;
   top: 4rem;
@@ -12,12 +13,12 @@
   box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
     5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+    margin-top: -1rem;
 }
 
 .categories-all .category {
   display: flex;
   flex-direction: row;
-
 }
 
 .categories-all .category .category-heading {
@@ -85,3 +86,11 @@
   text-decoration: none;
   margin-left: -3rem;
 }
+
+
+@media screen and (min-width: 768px) {
+  .categories-all .category.active .category-list h2 {
+  margin-left: -30%;
+  }
+}
+

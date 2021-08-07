@@ -1,3 +1,10 @@
+@media screen and (min-width: 768px) {
+  .wishlist-shop-more a {
+    margin-top: 0;
+  }
+  
+}
+
 .wishlist-all {
   background-color: white;
   padding: 2rem;
@@ -9,6 +16,7 @@
 }
 
 .wishlist-all h2 {
+  font-size: 1.25rem;
   text-align: center;
   margin-bottom: 0.5rem;
 }
@@ -21,6 +29,7 @@
 }
 
 .wishlist-all .loggedout a {
+  margin-top: 2rem;
   text-align: center;
   color: white;
   text-decoration: none;
@@ -46,12 +55,15 @@
     margin-top: 2rem;
     padding: 2rem;
     box-shadow:
-      -5px -5px 5px rgba(0, 0, 0, 0.1),
-      5px 5px 5px rgba(0, 0, 0, 0.1) !important;
-}
+    -5px -5px 5px rgba(0, 0, 0, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  }
+  .wishlist-shop-more p{
+    margin-bottom: 2rem;
+  }
 
 .wishlist-shop-more a {
-  margin-left: 2rem;
+  margin-top: 2rem;
   padding: 1rem 1.5rem;
   background-color: rgb(0, 81, 255);
   border-radius: 20px;

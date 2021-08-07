@@ -102,8 +102,8 @@ export const IndividualProduct = ({
       <div className="product-details">
         <h2>100% Authenticity Guaranteed</h2>   
         <p>We provide 100% safe, newly manufactured products for you. </p>       
-        <Link href="/authenticity-certificate">
-          <a target="_blank">See Certificate</a>
+        <Link  href="/authenticity-certificate">
+          <a style={{color: 'blue'}} target="_blank">See Certificate</a>
         </Link>
       </div>
       <div className="product-page-bottom">

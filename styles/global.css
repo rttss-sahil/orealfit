@@ -18,7 +18,7 @@ body h1 {
   font-size: 1rem;
   background-color: rgba(255, 255, 255, 0.01);
   text-align: center;
-  width: 40%;
+  width: 80%;
   margin: 0 auto;
   border-radius: 0 0 5rem 5rem;
   padding: 1.5rem 2rem 0.5rem;
@@ -31,4 +31,12 @@ body h1 {
 
 body input {
   font-family: brandon;
+}
+
+
+@media screen and (min-width:768px) {
+  body h1 {
+    width: 40%
+  }
+  
 }
