@@ -9,7 +9,7 @@ export const CartProduct = ({ state, dispatch, product, removeFromCart }) => {
     <div className="cart-page-item" key={product.id}>
       <div className="item-top">
         <div className="item-top-left">
-          <p>{product.name.slice(0, 40)}...</p>
+          <p>{product.name}</p>
           <div className="item-attributes">
             {product.attributes &&
               product.attributes.map((attribute, index) => (
