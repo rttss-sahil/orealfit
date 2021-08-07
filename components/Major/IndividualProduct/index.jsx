@@ -5,6 +5,7 @@ import Image from "next/image";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { IoBagAdd, IoBagCheck } from "react-icons/io5";
 import Link from "next/link";
+import Head from "next/head";
 
 import AwesomeSlider from "react-awesome-slider";
 
@@ -16,16 +17,25 @@ export const IndividualProduct = ({
   addToWishlist,
 }) => {
   const [attributes, setAttributes] = React.useState([]);
-  const [productPrice, seTProductPrice] = React.useState(0);
-  const [quantity, setQuantity]  =React.useState(1);
+  const [productPrice, setProductPrice] = React.useState(0);
+  const [quantity, setQuantity] = React.useState(1);
   React.useEffect(() => {
     const newAttributes = product.attributes &&[...product.attributes].map(item => ({name: item.name, option: item.options[0]}));
     if (newAttributes.length !== attributes.length) {
       setAttributes(newAttributes)
     }
-    product.price && seTProductPrice(product.price);
+    product.price && setProductPrice(product.price);
+    if (product) {
+      document.querySelector('#description').innerHTML = product.description
+    }
   })
   return (
+    <>
+    <Head>
+    {product.name && (
+      <title>{product.name}</title>
+    )}
+    </Head>
     <div className="product-page">
       <div className="product-page-carousel">
         <AwesomeSlider animation="cubeAnimation">
@@ -80,19 +90,19 @@ export const IndividualProduct = ({
             <option defaultValue>3</option>
             <option defaultValue>4</option>
             <option defaultValue>5</option>
-            <option defaultValue>6</option>
-            <option defaultValue>7</option>
           </select>
         </form>
       </div>
       </div>
       <div className="product-details">
-        <p>{product.description}</p>
+        <h2>Short Description</h2>
+      <div id="description">
+      </div>
       </div>
       <div className="product-details">
         <h2>100% Authenticity Guaranteed</h2>   
         <p>We provide 100% safe, newly manufactured products for you. </p>       
-        <Link href="/authenticuty-certicate">
+        <Link href="/authenticity-certificate">
           <a target="_blank">See Certificate</a>
         </Link>
       </div>
@@ -148,6 +158,7 @@ export const IndividualProduct = ({
         )}
       </div>
     </div>
+    </>
   );
 };
 

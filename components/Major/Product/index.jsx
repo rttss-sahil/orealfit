@@ -69,11 +69,11 @@ export const Product = ({
           ₹{product.price}
           </p>
           <p>
-          (₹{product.regular_price || product.price + 200})
+          (₹{product.regular_price || Number(product.price) + 200})
           </p>
           </div>
           <div className="products-page-item-discount">
-          {product.regular_price
+          {product.regular_price 
             ? "[-" +
               (
                 ((product.regular_price - product.price) /
@@ -81,7 +81,14 @@ export const Product = ({
                 100
               ).toFixed(0) +
               "% off ]"
-            : ""}
+            : 
+            "[-" +
+              (
+                (400 /
+                  (Number(product.price) + 200)) *
+                100
+              ).toFixed(0) +
+              "% off ]"}
         </div>
         </div>
       </Link>

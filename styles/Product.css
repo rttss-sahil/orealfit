@@ -137,8 +137,14 @@
   text-decoration: underline;
 }
 
+#description {
+  padding: 1rem;
+  padding-left: 2rem;
+}
 
-
+#description * {
+  /* list-style: none; */
+}
 
 
 
