@@ -12,6 +12,13 @@ export const Header = ({ state, homepage }) => {
           <Link href="/">
             <Image className="header__logo" src={logo} alt="Orealfit Logo" />
           </Link>
+          {!state.user.loggedIn ? (
+            <p className="header-link">Welcome, Guest.
+            <Link href="/login">Login</Link>
+            </p>
+          ) : (
+            <p className="header-link">Hello, {state.user.user.name}</p>
+          )}
           {/* <Link href="/search">
             <div className="header___searchIcon">
               <p>Search</p>

@@ -376,7 +376,7 @@ export const TermsAndCondiitons = ({ state }) => {
         <br />
         <br />
         Questions about the Terms of Service should be sent to us at 
-        <Link href="mailto:info@helfy.in">info@helfy.in</Link>
+        <Link href="mailto:info@orealfit.com">info@orealfit.com</Link>
       </div>
     </div>
   );

@@ -18,9 +18,17 @@ export const More = ({ state, dispatch }) => {
             <Link href="/user/addresses">My Addresses</Link>
           </div>
         )}
-        {/* <div className="option-item"></div> */}
-        {/* <div className="option-item"></div> */}
-        {/* <div className="option-item"></div> */}
+        <div className="option-item">
+          <Link href="/terms-and-conditions">Terms and Conditions</Link>
+        </div>
+        <div className="option-item">
+          <Link href="/return-replacement-policy">
+            Returns / Replacement Policy
+          </Link>
+        </div>
+        <div className="option-item">
+          <Link href="/privacy-policy">Privacy Policy</Link>
+        </div>
         {!state.user.loggedIn ? (
           <div className="option-item account">
             <Link href="/login">SignIn / SignUp</Link>
@@ -36,20 +44,13 @@ export const More = ({ state, dispatch }) => {
               ];
             }}
           >
+          <div className="option-item account">
+          <Link href="#">
             Logout
+          </Link>
+          </div>
           </div>
         )}
-        <div className="option-item">
-          <Link href="/terms-and-conditions">Terms and Conditions</Link>
-        </div>
-        <div className="option-item">
-          <Link href="/return-replacement-policy">
-            Returns / Replacement Policy
-          </Link>
-        </div>
-        <div className="option-item">
-          <Link href="/privacy-policy">Privacy Policy</Link>
-        </div>
       </div>
     </div>
   );

@@ -48,7 +48,6 @@ export const SelectAddress = ({ state, dispatch }) => {
                 </label>
               </div>
             ))}
-            {console.log(state.checkout.products)}
             <input
               className={!selAddress ? "disabled" : ""}
               type="submit"

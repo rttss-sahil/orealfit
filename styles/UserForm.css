@@ -1,3 +1,9 @@
+@media screen and (min-width: 768px) {
+  .user-page form {
+    width: 60%;
+  }
+}
+
 .user-form {
   display: flex;
   align-items: center;
@@ -8,9 +14,10 @@
 .user-page form {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
+
 
 .user-page form .input-group {
   background-color: white;

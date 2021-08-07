@@ -89,11 +89,11 @@ export const Signup = ({ state, dispatch }) => {
         <GiCheckMark />
         <p>I agree to the</p>
         <div className="link">
-          <Link href="/terms-of-use">Terms of use</Link>
+          <Link href="/terms-and-conditions">Terms of use</Link>
         </div>
         <p>and</p>
         <div className="link">
-          <Link href="privacy-policy">Privacy Policy</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
         </div>
         <p>.</p>
       </div>

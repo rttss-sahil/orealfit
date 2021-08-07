@@ -9,6 +9,9 @@
   padding: 1rem;
 }
 
+.more-page-options .option-item:last-child {
+  text-align: center;
+}
 
 .more-page-options .option-item a {
   color: blue;
@@ -21,8 +24,8 @@
 }
 
 .more-page-options .option-item.account {
-  position: fixed;
-  bottom: 6rem;
+  position: absolute;
+  bottom: 5rem;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -58,5 +61,6 @@
     5px 5px 5px rgba(0, 0, 0, 0.1) !important;
   padding: 2rem;
   margin: 0 2rem;
-  border-radius: 1rem;
+  border-radius: 1rem
+  ;
 }

@@ -33,7 +33,13 @@ export const Cart = ({ state, dispatch }) => {
       <div className="cart-all">
         {state.user.loggedIn ? (
           state.cart.length <= 0 ? (
-            <h2>0 Products in Cart. Continue shopping.</h2>
+            <>
+            <h2>No Products were Found. Add them now!</h2>
+            <div className="cart-shop-more">
+        Join millions of Orealfit memebers
+        <Link href="/category">Continue Shopping</Link>
+      </div>
+            </>
           ) : (
             state.cart.map((product) => (
               <CartProduct product={product} removeFromCart={removeFromCart} />

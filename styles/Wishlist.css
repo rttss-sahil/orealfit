@@ -3,11 +3,14 @@
   padding: 2rem;
   box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.1),
     5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  width: 95vw;
+  margin: 0 auto;
+  border-radius: 1rem;
 }
 
 .wishlist-all h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .wishlist-all .loggedout {
@@ -28,8 +31,34 @@
   box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
     5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .wishlist-all .loggedout a:hover {
+    background-color: rgb(0, 81, 255);
+  }
+  
+  .wishlist-shop-more {
+    width: 95vw;
+    margin: 0 auto;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: white;
+    margin-top: 2rem;
+    padding: 2rem;
+    box-shadow:
+      -5px -5px 5px rgba(0, 0, 0, 0.1),
+      5px 5px 5px rgba(0, 0, 0, 0.1) !important;
 }
 
-.wishlist-all .loggedout a:hover {
+.wishlist-shop-more a {
+  margin-left: 2rem;
+  padding: 1rem 1.5rem;
   background-color: rgb(0, 81, 255);
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.wishlist-shop-more a:hover {
+  background-color: rgb(0, 63, 145);
 }

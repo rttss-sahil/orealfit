@@ -23,18 +23,18 @@ export const Login = ({ state, dispatch }) => {
         body: JSON.stringify({ email, password }),
       }).then((res) => res.json());
       if (user.message) {
+        Router.push("/");
         Promise.all([
           dispatch(actions.addUser(user)),
           dispatch(actions.addMessage(user.message)),
         ]);
-        Router.push("/");
       } else if (user.error) {
         dispatch(actions.addMessage(user.error));
       }
     };
   return (
     <div className="user-page">
-      <h1>Welcome back, Enter here</h1>
+      <h1>Welcome back</h1>
       <form onSubmit={(e) => submitLogin(e)}>
         <div className="input-group alert">
           <BsExclamation />

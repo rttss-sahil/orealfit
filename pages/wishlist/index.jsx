@@ -21,7 +21,7 @@ export const Wishlist = ({ state, dispatch }) => {
       <div className="wishlist-all">
         {state.user.loggedIn ? (
           state.wishlist.length <= 0 ? (
-            <h2>0 Products in Wishlist. Add Products to Wishlist.</h2>
+            <h2>No Products were found.  Add them now!</h2>
           ) : (
             state.wishlist.map((product, index) => (
               <Product
@@ -39,6 +39,10 @@ export const Wishlist = ({ state, dispatch }) => {
             <Link href="/login">Login</Link>
           </div>
         )}
+      </div>
+      <div className="wishlist-shop-more">
+        Join millions of Orealfit memebers
+        <Link href="/category">Continue Shopping</Link>
       </div>
     </div>
   );
