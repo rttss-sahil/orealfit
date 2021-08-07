@@ -1,11 +1,11 @@
 
 .category-page {
-  position: absolute;
+  /* position: absolute; */
   top: 4rem;
   left: 0;
   right: 0;
-  bottom: 1rem;
-  overflow: hidden;
+  bottom: 4rem;
+  /* overflow: hidden; */
 }
 
 .categories-all {
@@ -13,7 +13,8 @@
   box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
     5px 5px 5px rgba(0, 0, 0, 0.1) !important;
-    margin-top: -1rem;
+  margin-top: -1rem;
+  margin-bottom: 3rem;
 }
 
 .categories-all .category {

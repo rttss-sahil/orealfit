@@ -53,6 +53,7 @@ export const SelectAddress = ({ state, dispatch }) => {
                 </label>
               </div>
             ))}
+            <Link href="/user/addresses/add">Add New Address</Link>
             <input
               className={!selAddress ? "disabled" : ""}
               type="submit"
