@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import actions from "../../../store/actions/actions";
 import Router from "next/router";
+import Head from "next/head";
 
 export const SelectAddress = ({ state, dispatch }) => {
   const [selAddress, setSelAddress] = React.useState(null);
@@ -15,10 +16,14 @@ export const SelectAddress = ({ state, dispatch }) => {
       Router.push("/checkout/payment");
     }
   };
-  return (
+  return (<>
+  <Head>
+    <title>Select Address For Checkout</title>
+  </Head>
     <div>
       <h1>Select Address</h1>
       <div className="select-address-all">
+      {console.log(state.checkout)}
         {state.addresses.length > 0 ? (
           <form
             onSubmit={(e) => handleSubmit(e)}
@@ -59,7 +64,7 @@ export const SelectAddress = ({ state, dispatch }) => {
         )}
       </div>
     </div>
-  );
+  </>);
 };
 
 const mapStateToProps = (state, dispatch) => ({ state, dispatch });

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import Router from "next/router";
 
 import actions from "../../../store/actions/actions";
+import Head from "next/head";
 
 function loadScript(src) {
   return new Promise((resolve) => {
@@ -34,7 +35,7 @@ function Payment({ state, dispatch }) {
     }
 
     const options = {
-      key: live ? "rzp_live_DCQ9l9wScAEEmf" : "rzp_test_94ycVPW2nP8vei",
+      key: test ? "rzp_live_DCQ9l9wScAEEmf" : "rzp_test_94ycVPW2nP8vei",
       currency: "INR",
       amount: (state.checkout.payment * 100).toString(),
       // order_id: state.orders.length + 1,
@@ -62,11 +63,16 @@ function Payment({ state, dispatch }) {
   }
 
   return (
+    <>
+    <Head>
+      <title>Payment Page</title>
+    </Head>
     <div className="payment-page">
+    {console.log(state.checkout)}
       <h1>Payment</h1>
       <div className="payment-all">
         <div onClick={displayRazorpay} className="payment-item">
-          Online Payment ( Faster Delivery )
+          Online Payment ( Faster Delivery, recommended )
         </div>
         <div
           onClick={() => {
@@ -92,7 +98,7 @@ function Payment({ state, dispatch }) {
         </div>
       </div>
     </div>
-  );
+  </>);
 }
 
 const mapStateToProps = (state, dispatch) => ({
