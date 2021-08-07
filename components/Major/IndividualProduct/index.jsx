@@ -15,12 +15,14 @@ export const IndividualProduct = ({
   removeFromWishlist,
   addToWishlist,
 }) => {
-  const [attributes, setAttributes] = React.useState({});
+  const [attributes, setAttributes] = React.useState([]);
+  const [productPrice, seTProductPrice] = React.useState(0);
   React.useEffect(() => {
     product.attributes && setAttributes(product.attributes)
+    product.price && seTProductPrice(product.price);
   })
   return (
-    <>
+    <div className="product-page">
       <div className="product-page-carousel">
         <AwesomeSlider animation="cubeAnimation">
           {product.images.map((image, index) => 
@@ -32,35 +34,38 @@ export const IndividualProduct = ({
       </div>
       <div className="product-details">
       <div className="product-page-name">{product.name}</div>
-      <div className="product-page-price">
-        <p>  ₹{product.price}</p>
-        <p>  ₹{product.regular_price || Number(product.price) + 400}</p>
-        <p>{
-        "[-" +
+      <div className="product-page-attribute">
+      {product.attributes && 
+        product.attributes.map((item, index) => (
+          <form className="attribute" key={index} >
+            <div className="attribute-name">{item.name}</div>
+            {item.options && (
+              <select >
+              {console.log(attributes.find(a => a.name === "Weight"))}
+              {item.options.map((option, optionIndex) => (
+                <option className="option-item" value={option.name} key={optionIndex}>
+                  {option}
+                </option>
+            ))}
+              </select>
+            )
+              }
+          </form>
+        ))}
+      </div>
+        <div className="product-page-discount">{
+        "[Save " +
               (
                 (((product.regular_price || Number(product.price) + 400) - Number(product.price)) /
                   (product.regular_price || Number(product.price) + 400)) *
                 100
               ).toFixed(0) +
               "% off ]"}
-        </p>
-      </div>
+        </div>
       <div className="product-page-price">
-          {product.price}
+        <p>  ₹{productPrice}</p>
+        <p>  [₹{product.regular_price || Number(product.price) + 400}]</p>
       </div>
-      {product.attributes && 
-        product.attributes.map((item, index) => (
-          <div className="product-page-attribute" key={index}>
-            <div className="attribute-name">{item.name}</div>
-            {item.options &&
-              item.options.map((option, optionIndex) => {
-                return (
-                <div className="option-item" key={optionIndex}>
-                  {option}
-                </div>
-              )})}
-          </div>
-        ))}
       </div>
       <div className="product-page-bottom">
         {state.user.loggedIn ? (
@@ -113,7 +118,7 @@ export const IndividualProduct = ({
           </Link>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

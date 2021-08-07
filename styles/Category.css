@@ -8,7 +8,8 @@
 }
 
 .categories-all {
-  background-color: rgba(205, 205, 205, 0.01);
+  /* background-color: rgba(205, 205, 205, 0.1); */
+  background-color: white;
   position: relative;
   box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
