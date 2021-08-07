@@ -23,7 +23,18 @@ const Cart = (state = initialState, action) => {
             product: action.payload.product,
             email: action.payload.email,
           })
-        );
+          );
+        return newState;
+      }
+      return state;
+
+    case actionTypes.changeProductInCart:
+      console.log('here')
+      const index = state.findIndex(item => item.id === action.payload.product.id)
+      console.log(index)
+      if (index >= 0){
+        newState = [...state];
+        newState[index].quantity = action.payload.product.quantity;
         return newState;
       }
       return state;

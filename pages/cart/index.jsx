@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import Link from "next/link";
+import Head from "next/head";
 import Router from "next/router";
 
 import actions from "../../store/actions/actions";
@@ -16,7 +17,7 @@ export const Cart = ({ state, dispatch }) => {
   const price =
     state.cart.length > 0 &&
     (state.cart.length === 1
-      ? state.cart[0].price * (state.cart[0].quantity || 1)
+      ? state.cart[0].price * (state.cart[0].quantity)
       : state.cart.reduce((total, item) => total + Number(item.price * (item.quantity || 1)), 0));
   const regularPrice =
     state.cart.length > 0 &&
@@ -27,7 +28,11 @@ export const Cart = ({ state, dispatch }) => {
             total + Number(item.regular_price || Number(item.price) + 200),
           0
         ));
-  return (
+        console.log(state.cart[0])
+  return (<>
+  <Head>
+    <title>Cart | Orealfit</title>
+  </Head>
     <div className="cart-page">
       <h1>Cart / Bag</h1>
       <div className="cart-all">
@@ -100,7 +105,7 @@ export const Cart = ({ state, dispatch }) => {
         </div>
       )}
     </div>
-  );
+  </>);
 };
 
 const mapStateToProps = (state, dispatch) => ({ state, dispatch });

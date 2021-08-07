@@ -16,7 +16,7 @@ export const CartProduct = ({ state, dispatch, product, removeFromCart }) => {
             {product.selectedAttributes &&
               product.selectedAttributes.map((attribute, index) => (
                 <div className="attribute" key={index}>
-                  <div className="attribute-name">{attribute.name} :</div>
+                  <div className="attribute-name">{attribute.name} : </div>
                   <div className="attribute-option">{attribute.option}
                   </div>
                 </div>
@@ -48,14 +48,7 @@ export const CartProduct = ({ state, dispatch, product, removeFromCart }) => {
             <>
               <label>Quantity: </label>
               <select defaultValue={product.quantity} onChange={e => {setQuantity(e.target.value);
-              Promise.all([
-                dispatch(actions.removeProductFromCart({product})), 
-                dispatch(actions.addProductToCart(
-                {
-                  product: {...product, quantity},
-                   email: state.user.user.email
-                }
-                   ))])}}>
+              dispatch(actions.changeProductInCart({product: {...product, quantity: e.target.value}, email: state.user.user.email}))}}>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
