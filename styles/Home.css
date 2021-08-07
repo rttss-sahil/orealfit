@@ -1,9 +1,8 @@
 .slider-all {
   position: relative;
-  background-color: white;
-  box-shadow:
+  /* box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
-    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+    5px 5px 5px rgba(0, 0, 0, 0.1) !important; */
 }
 
 .awssld__box .awssld__content {

@@ -11,12 +11,11 @@ export const CartProduct = ({ state, dispatch, product, removeFromCart }) => {
         <div className="item-top-left">
           <p>{product.name}</p>
           <div className="item-attributes">
-            {product.attributes &&
-              product.attributes.map((attribute, index) => (
+            {product.selectedAttributes &&
+              product.selectedAttributes.map((attribute, index) => (
                 <div className="attribute" key={index}>
                   <div className="attribute-name">{attribute.name} :</div>
-                  <div className="attribute-option">
-                    {attribute.options.length <= 1 && attribute.options[0]},
+                  <div className="attribute-option">{attribute.option}
                   </div>
                 </div>
               ))}

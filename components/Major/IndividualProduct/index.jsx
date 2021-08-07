@@ -108,17 +108,17 @@ export const IndividualProduct = ({
       </div>
       <div className="product-page-bottom">
         {state.user.loggedIn ? (
-          !state.wishlist.some((item) => item.id === product.place.id) ? (
+          !state.wishlist.some((item) => item.id === product.id) ? (
             <div
               className="add-to-wishlist"
-              onClick={() => addToWishlist(product.place)}
+              onClick={() => addToWishlist(product)}
             >
               <BsHeart /> WISHLIST
             </div>
           ) : (
             <div
               className="add-to-wishlist"
-              onClick={() => removeFromWishlist(product.place)}
+              onClick={() => removeFromWishlist(product)}
             >
               <BsHeartFill /> WISHLISTED
             </div>
@@ -133,10 +133,10 @@ export const IndividualProduct = ({
           </Link>
         )}
         {state.user.loggedIn ? (
-          !state.cart.some((item) => item.id === product.place.id) ? (
+          !state.cart.some((item) => item.id === product.id) ? (
             <div
               className="add-to-cart"
-              onClick={() => addToCart({ ...product.place, qty: 1 })}
+              onClick={() => addToCart({ ...product, quantity, selectedAttributes: attributes })}
             >
               <IoBagAdd /> ADD TO BAG
             </div>
