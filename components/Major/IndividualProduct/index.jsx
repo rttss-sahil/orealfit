@@ -15,32 +15,53 @@ export const IndividualProduct = ({
   removeFromWishlist,
   addToWishlist,
 }) => {
+  const [attributes, setAttributes] = React.useState({});
+  React.useEffect(() => {
+    product.attributes && setAttributes(product.attributes)
+  })
   return (
     <>
       <div className="product-page-carousel">
         <AwesomeSlider animation="cubeAnimation">
-          {product.place.images.map((image, index) => {
-            return (
+          {product.images.map((image, index) => 
               <div key={index}>
                 <Image height={300} width={300} src={image.src} />
               </div>
-            );
-          })}
+          )}
         </AwesomeSlider>
       </div>
-      <div className="product-page-name">{product.place.name}</div>
-      {product.attributes &&
+      <div className="product-details">
+      <div className="product-page-name">{product.name}</div>
+      <div className="product-page-price">
+        <p>  ₹{product.price}</p>
+        <p>  ₹{product.regular_price || Number(product.price) + 400}</p>
+        <p>{
+        "[-" +
+              (
+                (((product.regular_price || Number(product.price) + 400) - Number(product.price)) /
+                  (product.regular_price || Number(product.price) + 400)) *
+                100
+              ).toFixed(0) +
+              "% off ]"}
+        </p>
+      </div>
+      <div className="product-page-price">
+          {product.price}
+      </div>
+      {product.attributes && 
         product.attributes.map((item, index) => (
           <div className="product-page-attribute" key={index}>
             <div className="attribute-name">{item.name}</div>
             {item.options &&
-              item.options.map((option, optionIndex) => (
+              item.options.map((option, optionIndex) => {
+                return (
                 <div className="option-item" key={optionIndex}>
                   {option}
                 </div>
-              ))}
+              )})}
           </div>
         ))}
+      </div>
       <div className="product-page-bottom">
         {state.user.loggedIn ? (
           !state.wishlist.some((item) => item.id === product.place.id) ? (

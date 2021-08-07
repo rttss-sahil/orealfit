@@ -40,7 +40,7 @@ export const Product = ({ state, dispatch, product }) => {
         <h1>loading...</h1>
       ) : (
         <IndividualProduct
-          product={product}
+          product={product.place}
           addToCart={addToCart}
           removeFromWishlist={removeFromWishlist}
           addToWishlist={addToWishlist}

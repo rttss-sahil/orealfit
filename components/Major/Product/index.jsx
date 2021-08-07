@@ -14,16 +14,8 @@ export const Product = ({
   return (
     <div className="products-page-item" key={product.id}>
       <div className="products-page-item-top">
-        <div className="products-page-item-discount">
-          {product.regular_price
-            ? "-" +
-              (
-                ((product.regular_price - product.price) /
-                  product.regular_price) *
-                100
-              ).toFixed(0) +
-              "%"
-            : ""}
+        <div className="products-blank">
+           {' '}
         </div>
         {state.user.loggedIn ? (
           state.wishlist &&
@@ -51,33 +43,46 @@ export const Product = ({
         )}
       </div>
       <Link href={`/product/${product.id}`}>
+      <a target="_blank">
+      <div className="products-page-item-image">
         {product.images[0] ? (
           <Image
             src={`${product.images[0].src}`}
-            className="products-page-item-image"
             height={200}
             width={200}
           />
         ) : (
           <div></div>
         )}
+      </div>
+      </a>
       </Link>
       <Link href={`/product/${product.id}`}>
         <div className="products-page-item-name">
-          {product.name.slice(0, 40)}...
+          {product.name}
         </div>
       </Link>
       <Link href={`/product/${product.id}`}>
         <div className="products-page-item-bottom">
-          <div className="products-page-item-price">₹{product.price}</div>
-          <div className="products-page-item-rating">
-            <BsStarFill fill="orange" />
-            <p>
-              {Number(product.average_rating) === 0
-                ? "No ratings yet"
-                : product.average_rating}
-            </p>
+          <div className="products-page-item-price">
+          <p>
+          ₹{product.price}
+          </p>
+          <p>
+          (₹{product.regular_price || product.price + 200})
+          </p>
           </div>
+          <div className="products-page-item-discount">
+          {product.regular_price
+            ? "[-" +
+              (
+                ((product.regular_price - product.price) /
+                  product.regular_price) *
+                100
+              ).toFixed(0) +
+              "% off ]"
+            : ""}
+        </div>
         </div>
       </Link>
     </div>

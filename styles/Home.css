@@ -40,7 +40,7 @@
 .awssld__controls button .awssld__controls__arrow-right::before,
 .awssld__controls button .awssld__controls__arrow-right::after {
   background-color: #fff;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .log-yourself-in {

@@ -47,16 +47,18 @@ export const Category = ({ state }) => {
             </li>
             <li>
               <Link href="/category/whey-proteins-isolate">
-                Whey Protein Isloate
+                Whey Proteins Isloate
               </Link>
             </li>
             <li>
-              <Link href="/category/whey-concentrate">
-                Whey Protein Concentrate
+              <Link href="/category/whey-proteins-concentrate">
+                Whey Proteins Concentrate
               </Link>
             </li>
             <li>
-              <Link href="/category/">Reus Whey</Link>
+              <Link href="/category/rues-whey">
+              Reus Whey
+              </Link>
             </li>
           </ul>
         </div>
@@ -81,10 +83,12 @@ export const Category = ({ state }) => {
               <Link href="/category/weight-gain">Weight Gain</Link>
             </li>
             <li>
-              <Link href="/category/whey-protein-isolate">L Arginine</Link>
+              <Link href="/category/l-arginine">
+              L Arginine</Link>
             </li>
             <li>
-              <Link href="/category/whey-concentrate">Muscle Gain</Link>
+              <Link href="/category/muscle-gain">
+              Muscle Gain</Link>
             </li>
           </ul>
         </div>
@@ -105,22 +109,27 @@ export const Category = ({ state }) => {
               <Link href="/category/">All Pre/Post Workout</Link>
             </li> */}
             <li>
-              <Link href="/category/weight-gain">Pre Workout</Link>
+              <Link href="/category/pre-workout">
+              Pre Workout</Link>
             </li>
             <li>
-              <Link href="/category/whey-protein-isolate">BCAA</Link>
+              <Link href="/category/bcca">BCAA
+              </Link>
             </li>
             <li>
-              <Link href="/category/whey-concentrate">L Arginine</Link>
+              <Link href="/category/l-arginine">
+              L Arginine</Link>
             </li>
             <li>
-              <Link href="/category/whey-concentrate">EAA</Link>
+              <Link href="/category/eaa">EAA</Link>
             </li>
             <li>
-              <Link href="/category/whey-concentrate">Creatine</Link>
+              <Link href="/category/creatine">
+              Creatine</Link>
             </li>
             <li>
-              <Link href="/category/whey-concentrate">Glutamine</Link>
+              <Link href="/category/glutamine">
+              Glutamine</Link>
             </li>
           </ul>
         </div>
@@ -141,16 +150,17 @@ export const Category = ({ state }) => {
               <Link href="/category/">All Fat Loss</Link>
             </li> */}
             <li>
-              <Link href="/category/weight-gain">CLA</Link>
+              <Link href="/category/cla">CLA</Link>
             </li>
             <li>
-              <Link href="/category/whey-protein-isolate">L Arginine</Link>
+              <Link href="/category/l-arginine">
+              L Arginine</Link>
             </li>
             <li>
-              <Link href="/category/whey-concentrate">L Cosmitine</Link>
+              <Link href="/category/l-cosmitine">L Cosmitine</Link>
             </li>
             <li>
-              <Link href="/category/whey-concentrate">Garcinia Com</Link>
+              <Link href="/category/garcinia-com">Garcinia Com</Link>
             </li>
           </ul>
         </div>
@@ -171,13 +181,13 @@ export const Category = ({ state }) => {
               <Link href="/category/">All Vitamins & Wellness</Link>
             </li> */}
             <li>
-              <Link href="/category/weight-gain">Omega Fatty Acids</Link>
+              <Link href="/category/omega-fatty-acid">Omega Fatty Acids</Link>
             </li>
             <li>
-              <Link href="/category/whey-protein-isolate">Multi-Vitamins</Link>
+              <Link href="/category/multi-vitamins">Multi-Vitamins</Link>
             </li>
             <li>
-              <Link href="/category/whey-concentrate">WorkOut Essential</Link>
+              <Link href="/category/workout-essential">Workout Essential</Link>
             </li>
           </ul>
         </div>

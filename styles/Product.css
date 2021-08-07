@@ -1,12 +1,17 @@
 .product-page-carousel {
+  margin-top: 2rem;
   background-color: white;
 }
 
 .awssld {
   height: 45vh !important;
+  margin: 0 auto;
+  margin-top: 6rem !important;
+  width: 95vw !important;
+  border-radius: 1rem;
   box-shadow:
-    -5px -5px 5px rgba(0, 0, 0, 0.1),
-    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+    -5px -5px 5px rgba(70, 70, 70, 0.1),
+    5px 5px 5px rgba(70, 70, 70, 0.1) !important;
 }
 
 .awssld__content {
@@ -16,25 +21,32 @@
 }
 
 .awssld__bullets {
-  bottom: 15px !important;
+  bottom: 10px !important;
+  z-index: 999;
 }
 
 .awssld__bullets button {
-  background-color: rgba(0, 0, 0, 0.15) !important;
+  background-color: rgba(70, 70, 70, 0.4) !important;
   width: 8px !important;
   height: 8px !important;
 }
 
-
-
-
 .product-page-name {
   margin-top: 1rem;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
 }
 
 
+
+
+
+
+.product-page-attribute {
+  width: 95vw;
+  box-shadow:
+    -5px -5px 5px rgba(70, 70, 70, 0.1),
+    5px 5px 5px rgba(70, 70, 70, 0.1) !important;
+}
 
 
 
@@ -60,8 +72,9 @@
 }
 
 .product-page-bottom>* {
+  border-top: 1px solid rgba(70, 70, 70, 0.4);
   width: 50%;
-  background-color: purple;
+  background-color: rgb(255, 0, 85);
   color: white;
   text-align: center;
   cursor: pointer;
@@ -69,7 +82,7 @@
 }
 
 .product-page-bottom>*:hover {
-  background-color: rgb(70, 1, 70);
+  background-color: rgb(173, 0, 58);
 }
 
 
