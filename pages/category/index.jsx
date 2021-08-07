@@ -8,6 +8,7 @@ import gainers from "../../public/img/shop-by-categories/Gainer.jpg";
 import prepost from "../../public/img/shop-by-categories/Pre Post.jpg";
 import fatloss from "../../public/img/shop-by-categories/normal_1460333_o.png";
 import vitamins from "../../public/img/shop-by-categories/vitamins.jpg";
+import Head from "next/head";
 
 export const Category = ({ state }) => {
   const [proteinActive, setProteinActive] = React.useState(true),
@@ -23,6 +24,10 @@ export const Category = ({ state }) => {
       setVitaminsActive(false);
     };
   return (
+    <>
+    <Head>
+      <title>Categories by Orealfit</title>
+    </Head>
     <div className="category-page">
       <h1 className="category-title">All Categories</h1>
       <div className="categories-all">
@@ -193,6 +198,7 @@ export const Category = ({ state }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

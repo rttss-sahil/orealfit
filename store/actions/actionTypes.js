@@ -11,6 +11,7 @@ const actionTypes = {
   addDirectlyToCart: "ADD_DIRECTLY_TO_CART",
   removeProductFromCart: "REMOVE_PRODUCT_FROM_CART",
   removeAllFromCart: "REMOVE_ALL_FROM_CART",
+  changeProductInCart: "CHANGE_PRODUCT_IN_CART",
 
   addUser: "ADD_USER",
   removeUser: "REMOVE_USER",

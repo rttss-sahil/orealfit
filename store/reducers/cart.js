@@ -27,6 +27,7 @@ const Cart = (state = initialState, action) => {
         return newState;
       }
       return state;
+      
 
     case actionTypes.removeProductFromCart:
       if (state.some((item) => item.id === action.payload.product.id)) {

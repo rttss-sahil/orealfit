@@ -84,6 +84,7 @@
   border-radius: 1rem;
   width: 95vw;
   margin: 0 auto;
+  margin-top: 2rem;
   box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
     5px 5px 5px rgba(0, 0, 0, 0.1) !important;
@@ -103,10 +104,6 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-
-
-
-
 .place-order {
   margin: 1rem 0 3rem 0;
   text-align: center;
@@ -116,8 +113,7 @@
   text-decoration: none;
   color: white;
   cursor: pointer;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
   padding: 1.5rem 4rem;
   align-self: center;
   border-radius: 20px;

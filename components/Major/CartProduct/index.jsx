@@ -2,11 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 
 import Image from "next/image";
+import Link from "next/link";
+import actions from "../../../store/actions/actions";
 
 export const CartProduct = ({ state, dispatch, product, removeFromCart }) => {
-  const [count, SetCount] = React.useState(1);
+  const [quantity, setQuantity] = React.useState(1);
   return (
     <div className="cart-page-item" key={product.id}>
+    {console.log(product.selectedAttributes)}
       <div className="item-top">
         <div className="item-top-left">
           <p>{product.name}</p>
@@ -23,37 +26,35 @@ export const CartProduct = ({ state, dispatch, product, removeFromCart }) => {
           <p>Seller: Orealfit Inc.</p>
         </div>
         <div className="item-top-right">
+        <Link href={`/product/${product.id}`}>
           <Image src={product.images[0].src} height="100" width="100" />
+        </Link>
         </div>
       </div>
       <div className="item-mid">
         <div className="item-mid-left">
-          <p>₹ {product.price}</p>
-          <p>₹ {product.regular_price || Number(product.price) + 200}</p>
-          <p>
-            {(
-              (((product.regular_price || Number(product.price) + 200) -
-                product.price) /
-                (product.regular_price || Number(product.price) + 200)) *
-              100
-            ).toFixed(0)}{" "}
-            %
+          <p>₹ {product.price * quantity}</p>
+          <p>₹ {(product.regular_price*quantity) || (Number(product.price) + 200)*quantity}</p>
+          <p>{"[Save " +
+              (
+                (((product.regular_price || Number(product.price) + 400) - Number(product.price)) /
+                  (product.regular_price || Number(product.price) + 400)) *
+                100
+              ).toFixed(0) +
+              "% off ]"}
           </p>
         </div>
         <div className="item-mid-right">
           {product.stock_status !== "outofstock" && (
             <>
-              <label>Qty: </label>
-              <select>
-                <option
-                  value={
-                    product.stock_status !== "outofstock" &&
-                    product.stock_quantity
-                  }
-                >
-                  {product.stock_status !== "outofstock" &&
-                    product.stock_quantity}
-                </option>
+              <label>Quantity: </label>
+              <select defaultValue={product.quantity} onChange={e => {setQuantity(e.target.value);
+              Promise.all([dispatch(actions.removeProductFromCart(product)), dispatch(actions.addProductToCart({product: {...product, quantity}, email: state.user.user.email}))])}}>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
                 //{" "}
               </select>
             </>

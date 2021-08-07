@@ -43,6 +43,10 @@ const actions = {
     type: actionTypes.removeAllFromCart,
     payload,
   }),
+  changeProductInCart: (payload) => ({
+    type: actionTypes.changeProductInCart,
+    payload,
+  }),
 
   addUser: (payload) => ({
     type: actionTypes.addUser,

@@ -16,12 +16,12 @@ export const Cart = ({ state, dispatch }) => {
   const price =
     state.cart.length > 0 &&
     (state.cart.length === 1
-      ? state.cart[0].price
+      ? state.cart[0].price * state.cart[0].quantity
       : state.cart.reduce((total, item) => total + Number(item.price), 0));
   const regularPrice =
     state.cart.length > 0 &&
     (state.cart.length === 1
-      ? state.cart[0].regular_price || Number(state.cart[0].price) + 200
+      ? (state.cart[0].regular_price) * (state.cart[0].quantity) || (Number(state.cart[0].price) + 200) * (state.cart[0].quantity)
       : state.cart.reduce(
           (total, item) =>
             total + Number(item.regular_price || Number(item.price) + 200),

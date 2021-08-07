@@ -4,6 +4,7 @@
   box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
     5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 1rem;
 }
 
 .cart-page-item .item-top {
@@ -39,14 +40,25 @@
 
 
 .cart-page-item .item-top .item-top-right {
+  margin-right: 1rem;
   width: 300;
+  cursor: pointer;
 }
 
 .cart-page-item .item-mid {
-  padding: 0 0 1rem 1rem;
+  padding: 0 2rem 1rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.cart-page-item .item-mid-right select {
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(206, 206, 206);
+  background-color: rgba(70, 70, 70, 0.1);
 }
 
 .cart-page-item .item-mid .item-mid-left {
@@ -56,18 +68,21 @@
 }
 
 .cart-page-item .item-mid .item-mid-left :nth-child(1) {
-  font-size: 1.2rem;
-  font-weight: bolder;
+  color: black;
+  font-weight: normal;
+  font-size: 16px;
 }
 
 .cart-page-item .item-mid .item-mid-left :nth-child(2) {
   color: gray;
   text-decoration: line-through;
-  margin: 0 10px;
+  margin-left: 1rem;
 }
 
 .cart-page-item .item-mid .item-mid-left :nth-child(3) {
   color: green;
+  margin-left: 1rem;
+  font-size: 14px;
 }
 
 .cart-page-item .item-bottom {
@@ -79,5 +94,4 @@
 
 .cart-page-item .item-bottom:hover {
   background-color: rgba(0, 0, 0, 0.3);
-
 }
