@@ -8,8 +8,6 @@
 }
 
 .categories-all {
-  /* background-color: rgba(205, 205, 205, 0.1); */
-  background-color: white;
   position: relative;
   box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
@@ -26,19 +24,23 @@
   width: 30%;
   text-align: center;
   background-color: white;
-  padding: 10px 1rem;
+  padding: 10px 0.5rem;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .categories-all .category.active .category-heading {
-  width: 30%;
   background-color: rgba(0, 255, 255, 0.25);
 }
 
 .categories-all .category .category-heading img {
-  width: 100px;
+  width: 70px;
+}
+
+.categories-all .category .category-heading p{
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .categories-all .category .category-list {

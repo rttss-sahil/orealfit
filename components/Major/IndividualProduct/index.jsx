@@ -17,8 +17,12 @@ export const IndividualProduct = ({
 }) => {
   const [attributes, setAttributes] = React.useState([]);
   const [productPrice, seTProductPrice] = React.useState(0);
+  const [quantity, setQuantity]  =React.useState(1);
   React.useEffect(() => {
-    product.attributes && setAttributes(product.attributes)
+    const newAttributes = product.attributes &&[...product.attributes].map(item => ({name: item.name, option: item.options[0]}));
+    if (newAttributes.length !== attributes.length) {
+      setAttributes(newAttributes)
+    }
     product.price && seTProductPrice(product.price);
   })
   return (
@@ -40,8 +44,12 @@ export const IndividualProduct = ({
           <form className="attribute" key={index} >
             <div className="attribute-name">{item.name}</div>
             {item.options && (
-              <select >
-              {console.log(attributes.find(a => a.name === "Weight"))}
+              <select name={item.name} onChange={(e) => {
+                let attrIndex = (attributes.findIndex(attribute => attribute.name === item.name));
+                const newAttributes = attributes;
+                newAttributes[attrIndex].option = e.target.value;
+                setAttributes(newAttributes)
+              }}>
               {item.options.map((option, optionIndex) => (
                 <option className="option-item" value={option.name} key={optionIndex}>
                   {option}
@@ -63,9 +71,30 @@ export const IndividualProduct = ({
               "% off ]"}
         </div>
       <div className="product-page-price">
-        <p>  ₹{productPrice}</p>
-        <p>  [₹{product.regular_price || Number(product.price) + 400}]</p>
+        <p> ₹{productPrice * quantity}</p>
+        <p>  [Market Price: ₹{product.regular_price || Number(product.price) + 400}]</p>
+        <form>
+          <select name="quantity" onChange={e => setQuantity(e.target.value)}>
+            <option defaultValue>1</option>
+            <option defaultValue>2</option>
+            <option defaultValue>3</option>
+            <option defaultValue>4</option>
+            <option defaultValue>5</option>
+            <option defaultValue>6</option>
+            <option defaultValue>7</option>
+          </select>
+        </form>
       </div>
+      </div>
+      <div className="product-details">
+        <p>{product.description}</p>
+      </div>
+      <div className="product-details">
+        <h2>100% Authenticity Guaranteed</h2>   
+        <p>We provide 100% safe, newly manufactured products for you. </p>       
+        <Link href="/authenticuty-certicate">
+          <a target="_blank">See Certificate</a>
+        </Link>
       </div>
       <div className="product-page-bottom">
         {state.user.loggedIn ? (

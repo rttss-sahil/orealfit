@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import Link from "next/link";
 import Image from "next/image";
 
-import proteins from "../../public/img/shop-by-categories/normal_1460333_o.png";
-import gainers from "../../public/img/shop-by-categories/normal_1476745_o.png";
-import prepost from "../../public/img/shop-by-categories/normal_1476747_o.png";
-import fatloss from "../../public/img/shop-by-categories/normal_1476749_o.png";
-import vitamins from "../../public/img/shop-by-categories/normal_1476751_o.png";
+import proteins from "../../public/img/shop-by-categories/proteins.jpg";
+import gainers from "../../public/img/shop-by-categories/Gainer.jpg";
+import prepost from "../../public/img/shop-by-categories/Pre Post.jpg";
+import fatloss from "../../public/img/shop-by-categories/normal_1460333_o.png";
+import vitamins from "../../public/img/shop-by-categories/vitamins.jpg";
 
 export const Category = ({ state }) => {
   const [proteinActive, setProteinActive] = React.useState(true),
@@ -43,7 +43,7 @@ export const Category = ({ state }) => {
               <Link href="/category/all-proteins">All Proteins</Link>
             </li> */}
             <li>
-              <Link href="/category/whey-protein">Whey Protein</Link>
+              <Link href="/category/whey-proteins">Whey Protein</Link>
             </li>
             <li>
               <Link href="/category/whey-proteins-isolate">

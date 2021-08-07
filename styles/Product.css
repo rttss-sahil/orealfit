@@ -1,5 +1,5 @@
 .product-page {
-  margin-bottom: 7rem;
+  margin-bottom: 9rem;
 }
 
 .product-page-carousel {
@@ -38,6 +38,7 @@
 }
 
 .product-details {
+  padding: 0 20px;
   padding-top: 1rem;
   width: 95vw;
   margin: 0 auto;
@@ -54,19 +55,47 @@
   margin-top: 1rem;
   font-size: 22px;
   font-weight: bolder;
-  padding: 0 20px;
+}
+
+.product-page-attribute {
+  margin-top: 1rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.product-page-attribute .attribute {
+  border: 1px solid rgba(70, 70, 70, 0.4);
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+}
+
+.product-page-attribute .attribute select {
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(206, 206, 206);
+  background-color: rgba(70, 70, 70, 0.1);
+}
+
+.product-page-attribute .attribute .attribute-name {
+  color: rgba(70, 70, 70, 0.5);
+  text-align: left;
+  font-size: 14px;
 }
 
 .product-page-discount {
   margin-top: 1rem;
   color: green;
   font-size: 14px;
-  padding: 0 20px;
 }
 
 .product-page-price {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0 20px;
   margin: 1rem 0;
@@ -83,39 +112,30 @@
   margin-left: 2rem;
 }
 
-
-
-.product-page-attribute {
-  margin-top: 1rem;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.product-page-attribute .attribute {
-  border: 1px solid rgba(70, 70, 70, 0.1);
-  border-radius: 1rem;
-  padding: 0.5rem 2rem;
-}
-
-.product-page-attribute .attribute select {
+.product-page-price select {
   padding: 10px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(206, 206, 206);
   background-color: rgba(70, 70, 70, 0.1);
 }
 
-.product-page-attribute .attribute .attribute-name {
-  color: rgba(70, 70, 70, 0.5);
-  text-align: left;
-  font-size: 14px;
+.product-details:nth-child(3) {
+  padding: 2rem 1rem;
+}
+.product-details:nth-child(4) {
+  text-align: center;
+  padding: 2rem 0; 
 }
 
+.product-details:nth-child(4) a{
+  text-decoration: none;
+}
 
-
-
-
-
-
+.product-details:nth-child(4) a:hover{
+  text-decoration: underline;
+}
 
 
 
