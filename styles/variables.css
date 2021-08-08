@@ -1,4 +1,27 @@
 :root {
+  
   --primary-color: black;
+
   --primary-text-color: black;
+
+  --box-shadow-dark: 
+  -5px -5px 5px rgba(0, 0, 0, 0.1),
+  5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+
+  --box-shadow-main: 
+  -5px -5px 5px rgba(0, 0, 0, 0.05),
+  5px 5px 5px rgba(0, 0, 0, 0.05) !important;
+
+  --box-shadow-main-top: 
+  -5px -5px 5px rgba(0, 0, 0, 0.05) !important;
+
+  --box-shadow-main-bottom: 
+  5px 5px 5px rgba(0, 0, 0, 0.05) !important;
+
+  --border-main:
+  1px solid rgba(0, 0, 0, 0.05) !important;
+
+  --button-bg-color: rgb(0, 110, 255);
+  
+  --button-bg-color-hover: rgb(0, 59, 185);
 }

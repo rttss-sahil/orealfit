@@ -6,11 +6,11 @@
   background-color: white;
   display: flex;
   justify-content: space-between;
-  height: 5rem;
+  height: 4.5rem;
   padding: 0 2rem;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: var(--border-main);
+  box-shadow: var(--box-shadow-main-bottom);
 }
 
 .header__logo {
@@ -40,9 +40,7 @@
   border-radius: 10px;
   color: rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow:
-    -1px -1px 1px rgba(0, 0, 0, 0.1),
-    1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-main);
 }
 
 .header .header___searchIcon svg {

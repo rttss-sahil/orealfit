@@ -8,8 +8,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: var(--border-main);
+  box-shadow: var(--box-shadow-main-top);
 }
 
 .footer-item {
@@ -20,6 +20,8 @@
   font-size: 12px;
   width: 25%;
   height: 100%;
+  border: var(--border-main);
+  cursor: pointer;
 }
 
 .footer-item:hover {
@@ -31,8 +33,3 @@
   cursor: pointer;
   font-size: 20px;
 }
-
-/* .footer-item.active {
-  font-size: 30px;
-  color: blueviolet;
-} */

@@ -2,17 +2,17 @@
   .wishlist-shop-more a {
     margin-top: 0;
   }
-  
 }
 
 .wishlist-all {
   background-color: white;
   padding: 2rem;
-  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.1),
-    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: var(--box-shadow-main);
   width: 95vw;
   margin: 0 auto;
   border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .wishlist-all h2 {
@@ -36,41 +36,51 @@
   cursor: pointer;
   padding: 1.5rem 4rem;
   border-radius: 20px;
-  background-color: rgb(0, 110, 255);
+  background-color: var(--button-bg-color);
+  box-shadow: var(--box-shadow-main);
+  }
+  
+.wishlist-all .loggedout a:hover {
+  background-color: var(--button-bg-color-hover);
+}
+
+.wishlist-shop-more {
+  width: 95vw;
+  margin: 0 auto;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: white;
+  margin-top: 2rem;
+  padding: 2rem;
   box-shadow:
-    -5px -5px 5px rgba(0, 0, 0, 0.1),
-    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
-  }
-  
-  .wishlist-all .loggedout a:hover {
-    background-color: rgb(0, 81, 255);
-  }
-  
-  .wishlist-shop-more {
-    width: 95vw;
-    margin: 0 auto;
-    border-radius: 1rem;
-    text-align: center;
-    background-color: white;
-    margin-top: 2rem;
-    padding: 2rem;
-    box-shadow:
-    -5px -5px 5px rgba(0, 0, 0, 0.1),
-    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
-  }
-  .wishlist-shop-more p{
-    margin-bottom: 2rem;
-  }
+  var(--box-shadow-main);
+}
+.wishlist-shop-more p{
+  margin-bottom: 2rem;
+}
 
 .wishlist-shop-more a {
   margin-top: 2rem;
   padding: 1rem 1.5rem;
-  background-color: rgb(0, 81, 255);
+  background-color: var(--button-bg-color);
   border-radius: 20px;
   color: white;
   text-decoration: none;
 }
 
 .wishlist-shop-more a:hover {
-  background-color: rgb(0, 63, 145);
+  background-color: var(--button-bg-color-hover);
+}
+
+
+@media screen and (min-width: 768px) {
+  .wishlist-all {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wishlist-all {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

@@ -76,36 +76,34 @@ export const HomePage = ({ state, dispatch }) => {
         <div className="shop-by-categories-all">
           <div className="shop-by-categories-item">
             <Image src={proteins} objectFit="fill" />
-            <Link href="/">Proteins</Link>
+            <div>Proteins</div>
             <Link href="/category/">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
             <Image src={gainers} objectFit="fill" />
-            <Link href="/">Gainers</Link>
+            <div>Gainers</div>
             <Link href="/category">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
             <Image src={prepost} objectFit="fill" />
-            <Link href="/">Pre / Post Workout</Link>
-            <Link href="/">Start Shopping</Link>
+            <div>Pre / Post Workout</div>
+            <Link href="/category">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
             <Image src={fatloss} objectFit="fill" />
-            <Link href="/">Fat Loss</Link>
-            <Link href="/">Start Shopping</Link>
+            <div>Fat Loss</div>
+            <Link href="/category">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
             <Image src={vitamins} objectFit="fill" />
-            <Link href="/">Vitamins And Essential</Link>
-            <Link href="/">Start Shopping</Link>
+            <div>Vitamins And Essential</div>
+            <Link href="/category">Start Shopping</Link>
           </div>
         </div>
       </div>
       <div className="top-sellers">
         <h2>Top Sellers</h2>
         <div className="top-sellers-all">
-            {/* <Link href={`/product/${product.id}`} key={product.id}>
-            <div className="top-sellers-item" > */}
           {topSellers.map((product) => (
             <Product
             product={product}

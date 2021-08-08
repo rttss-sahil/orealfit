@@ -1,15 +1,9 @@
-.cart-page {
-  /* margin-bottom: 3rem; */
-}
-
 .cart-all>h2{
   width: 95vw;
   margin: 0 auto;
   border-radius: 1rem;
   background-color: white;
-  box-shadow:
-  -5px -5px 5px rgba(0, 0, 0, 0.1),
-  5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: var(--box-shadow-main);
   padding: 2rem 0;
   text-align: center;
   font-size: 1.25rem;
@@ -20,9 +14,7 @@
   background-color: white;
   margin-top: 2rem;
   padding: 2rem;
-  box-shadow:
-  -5px -5px 5px rgba(0, 0, 0, 0.1),
-  5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: var(--box-shadow-main);
   border-radius: 1rem;
 }
 
@@ -32,27 +24,24 @@
 
 .cart-shop-more a {
   padding: 1rem 1.5rem;
-  background-color: rgb(0, 81, 255);
+  background-color: var(--button-bg-color);
   border-radius: 20px;
   color: white;
   text-decoration: none;
 }
 
 .cart-shop-more a:hover {
-  background-color: rgb(0, 63, 145);
+  background-color: var(--button-bg-color-hover);
 }
 
 .cart-all .loggedout {
   width: 95vw;
-  /* font-size: 1.25rem; */
   margin: 0 auto;
   border-radius: 1rem;
   background-color: white;
-  box-shadow:
-    -5px -5px 5px rgba(0, 0, 0, 0.1),
-    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
-    padding: 2rem 0;
-    text-align: center;
+  box-shadow: var(--box-shadow-main);
+  padding: 2rem 0;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,15 +55,13 @@
   text-decoration: none;
   cursor: pointer;
   padding: 1.5rem 4rem;
-  border-radius: 20px;
-  background-color: rgb(0, 110, 255);
-  box-shadow:
-    -5px -5px 5px rgba(0, 0, 0, 0.1),
-    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 1rem;
+  background-color: var(--button-bg-color);
+  box-shadow: var(--box-shadow-main);
 }
 
 .cart-all .loggedout a:hover {
-  background-color: rgb(0, 81, 255);
+  background-color: var(--button-bg-color-hover);
 }
 
 .cart-all {
@@ -89,9 +76,7 @@
   width: 95vw;
   margin: 0 auto;
   margin-top: 2rem;
-  box-shadow:
-    -5px -5px 5px rgba(0, 0, 0, 0.1),
-    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: var(--box-shadow-main);
   background-color: white;
 }
 
@@ -104,8 +89,8 @@
   margin-top: 10px;
   padding: 2px 5px;
   background-color: rgba(0, 0, 0, 0.1);
-  border-top: 1px solid rgba(0, 0, 0, 0.4);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-top: var(--border-main);
+  border-bottom: var(--border-main);
 }
 
 .place-order {
@@ -121,13 +106,11 @@
   padding: 1.5rem 4rem;
   align-self: center;
   border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgb(0, 110, 255);
-  box-shadow:
-    -5px -5px 5px rgba(0, 0, 0, 0.1),
-    5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  border: var(--border-main);
+  background-color: var(--button-bg-color);
+  box-shadow: var(--border-main);
 }
 
 .place-order button:hover {
-  background-color: rgb(0, 81, 255);
+  background-color: var(--button-bg-color-hover);
 }

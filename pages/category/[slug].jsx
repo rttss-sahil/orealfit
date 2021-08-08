@@ -1,5 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
+
+import Head from 'next/head';
+
 import Product from "../../components/Major/Product";
 import {
   getAllCategoryIds,
@@ -30,7 +33,10 @@ export const ProductListFromCatgory = ({ products, state, dispatch }) => {
       setLoadingOff();
     }
   }, [products]);
-  return (
+  return (<>
+  <Head>
+    {/* <title>{}</title> */}
+  </Head>
     <div className="products-page">
       {!loading && <h1>{products.category.length} Products Found</h1>}
       {loading ? (
@@ -48,7 +54,7 @@ export const ProductListFromCatgory = ({ products, state, dispatch }) => {
         </ul>
       )}
     </div>
-  );
+  </>);
 };
 
 export async function getStaticPaths() {
