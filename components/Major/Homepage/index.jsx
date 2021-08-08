@@ -63,13 +63,13 @@ export const HomePage = ({ state, dispatch }) => {
         </AwesomeSlider>
       </div>
 
-      {!state.user.loggedIn && (
+      {/* {!state.user.loggedIn && (
         <div className="log-yourself-in">
           <p>Already a member, or new here?</p>
           <p>Whatever your reason, </p>
           <Link href="/login">Login / Register</Link>
         </div>
-      )}
+      )} */}
       <div className="shop-by-categories">
         <h2>Shop by Categories</h2>
         <div className="shop-by-categories-all">
