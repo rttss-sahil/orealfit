@@ -1,6 +1,5 @@
 .categories-all {
   border-radius: 1rem;
-  border: 2px solid black;
   position: relative;
   box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
@@ -40,9 +39,9 @@
   position: absolute;
   display: none;
   list-style: none;
-  padding-left: 3rem;
-  left: 40%;
-  width: 60%;
+  /* padding-left: 3rem; */
+  left: 50%;
+  width: 45%;
   top: 5%;
 }
 
@@ -51,7 +50,7 @@
 }
 
 .categories-all .category.active .category-list h2 {
-  margin-left: -40%;
+  margin-left: -30%;
   width: fit-content;
   color: rgb(0, 109, 109);
   text-align: left;
@@ -83,7 +82,7 @@
 
 @media screen and (min-width: 768px) {
   .categories-all .category.active .category-list h2 {
-  margin-left: -30%;
+  margin-left: -20%;
   }
 }
 
