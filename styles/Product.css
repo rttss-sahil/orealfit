@@ -31,7 +31,7 @@
 
 .awssld__bullets {
   bottom: 10px !important;
-  z-index: 999;
+  z-index: 998;
 }
 
 .awssld__bullets button {

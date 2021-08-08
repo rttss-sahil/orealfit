@@ -141,8 +141,16 @@
 }
 
 .logos .logo-row {
-  margin: 2rem 0;
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100px;
 }
+
 .logos .logo-row img{
-  height: 40px;
+  padding: 0 1rem !important;
+  /* height: 40px; */
+  /* margin: 0 1rem !important; */
 }
