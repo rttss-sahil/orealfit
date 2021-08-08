@@ -1,19 +1,10 @@
-
-.category-page {
-  /* position: absolute; */
-  top: 4rem;
-  left: 0;
-  right: 0;
-  bottom: 4rem;
-  /* overflow: hidden; */
-}
-
 .categories-all {
+  border-radius: 1rem;
+  border: 2px solid black;
   position: relative;
   box-shadow:
     -5px -5px 5px rgba(0, 0, 0, 0.1),
     5px 5px 5px rgba(0, 0, 0, 0.1) !important;
-  margin-top: -1rem;
   margin-bottom: 3rem;
 }
 
@@ -23,13 +14,13 @@
 }
 
 .categories-all .category .category-heading {
-  width: 30%;
+  width: 30%; 
   text-align: center;
   background-color: white;
   padding: 10px 0.5rem;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 1px 2px rgba(150, 150, 150, 0.1);
 }
 
 .categories-all .category.active .category-heading {
@@ -46,30 +37,31 @@
 }
 
 .categories-all .category .category-list {
+  position: absolute;
   display: none;
   list-style: none;
   padding-left: 3rem;
+  left: 40%;
+  width: 60%;
+  top: 5%;
 }
 
 .categories-all .category.active .category-list {
-  position: absolute;
-  top: 5%;
-  left: 48%;
-  width: 60%;
   display: block;
 }
 
 .categories-all .category.active .category-list h2 {
   margin-left: -40%;
+  width: fit-content;
   color: rgb(0, 109, 109);
   text-align: left;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .categories-all .category .category-list li {
   position: relative;
   padding: 10px;
-  margin-left: -2rem;
 }
 
 .categories-all .category .category-list li::after {

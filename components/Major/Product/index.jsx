@@ -48,8 +48,7 @@ export const Product = ({
         {product.images[0] ? (
           <Image
             src={`${product.images[0].src}`}
-            height={200}
-            width={200}
+            layout="fill"
           />
         ) : (
           <div></div>

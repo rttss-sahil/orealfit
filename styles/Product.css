@@ -81,6 +81,7 @@
   border-radius: 10px;
   border: 1px solid rgb(230, 230, 230);
   background-color: rgba(184, 184, 184, 0.1);
+  font-family: brandon;
 }
 
 .product-page-attribute .attribute .attribute-name {

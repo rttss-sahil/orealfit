@@ -59,15 +59,19 @@
 .products-page-item a {
   color: black;
   text-decoration: none;
-  width: 100%;
-  padding: 0 10px;
+  width: 120%;
+  padding: 0 25px;
 }
 
 .products-page-item-image {
-  min-height: 250px !important;
-  min-width: 200px !important;
+  position: relative;
+  height: 200px !important;
+  width: 200px !important;
   cursor: pointer;
   text-align: center;
+}
+.products-page-item-image img{
+  padding: 1rem !important;
 }
 
 .products-page-item-name {
