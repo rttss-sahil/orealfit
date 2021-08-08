@@ -1,12 +1,10 @@
-.more-page {}
-
 .more-page-options .option-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .more-page-options .option-item:last-child {
@@ -15,7 +13,7 @@
 
 .more-page-options .option-item a {
   color: blue;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
 }
 

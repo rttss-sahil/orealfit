@@ -40,7 +40,9 @@ export const Cart = ({ state, dispatch }) => {
             <>
             <h2>No Products were Found. Add them now!</h2>
             <div className="cart-shop-more">
+            <p>
         Join millions of Orealfit memebers
+            </p>
         <Link href="/category">Continue Shopping</Link>
       </div>
             </>
