@@ -58,11 +58,14 @@ export const Product = ({
       </a>
       </Link>
       <Link href={`/product/${product.id}`}>
+      <a target="_blank">
         <div className="products-page-item-name">
           {product.name}
         </div>
+      </a>
       </Link>
       <Link href={`/product/${product.id}`}>
+      <a target="_blank">
         <div className="products-page-item-bottom">
           <div className="products-page-item-price">
           <p>
@@ -91,6 +94,7 @@ export const Product = ({
               "% off ]"}
         </div>
         </div>
+      </a>
       </Link>
     </div>
   );

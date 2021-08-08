@@ -79,8 +79,8 @@
   cursor: pointer;
   outline: none;
   border-radius: 10px;
-  border: 1px solid rgb(206, 206, 206);
-  background-color: rgba(70, 70, 70, 0.1);
+  border: 1px solid rgb(230, 230, 230);
+  background-color: rgba(184, 184, 184, 0.1);
 }
 
 .product-page-attribute .attribute .attribute-name {
@@ -116,12 +116,12 @@
 }
 
 .product-page-price select {
-  padding: 10px;
+  padding: 5px 10px;
   cursor: pointer;
   outline: none;
   border-radius: 10px;
-  border: 1px solid rgb(206, 206, 206);
-  background-color: rgba(70, 70, 70, 0.1);
+  border: 1px solid rgb(233, 233, 233);
+  background-color: rgba(189, 189, 189, 0.1);
 }
 
 .product-details:nth-child(3) {

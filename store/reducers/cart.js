@@ -7,6 +7,7 @@ const Cart = (state = initialState, action) => {
   let newState;
   switch (action.type) {
     case actionTypes.addDirectlyToCart:
+      
       if (action.payload.length > 0) {
         state = action.payload;
       } else {
@@ -29,9 +30,7 @@ const Cart = (state = initialState, action) => {
       return state;
 
     case actionTypes.changeProductInCart:
-      console.log('here')
       const index = state.findIndex(item => item.id === action.payload.product.id)
-      console.log(index)
       if (index >= 0){
         newState = [...state];
         newState[index].quantity = action.payload.product.quantity;

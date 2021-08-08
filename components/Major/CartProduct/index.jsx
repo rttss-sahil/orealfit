@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import Image from "next/image";
 import Link from "next/link";
 import actions from "../../../store/actions/actions";
+import Product from "../Product";
 
 export const CartProduct = ({ state, dispatch, product, removeFromCart }) => {
   const [quantity, setQuantity] = React.useState(1);
@@ -26,7 +27,8 @@ export const CartProduct = ({ state, dispatch, product, removeFromCart }) => {
         </div>
         <div className="item-top-right">
         <Link href={`/product/${product.id}`}>
-          <Image src={product.images[0].src} height="100" width="100" />
+        {console.log(product)}
+          {/* <Image src={product.images[0].src} height="100" width="100" /> */}
         </Link>
         </div>
       </div>

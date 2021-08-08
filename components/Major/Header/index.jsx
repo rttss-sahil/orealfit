@@ -17,7 +17,7 @@ export const Header = ({ state, homepage }) => {
             <Link href="/login">Login</Link>
             </p>
           ) : (
-            <p className="header-link">Hello, {state.user.user.name}</p>
+            <p className="header-link">Welcome back, {state.user.user.name}</p>
           )}
           {/* <Link href="/search">
             <div className="header___searchIcon">

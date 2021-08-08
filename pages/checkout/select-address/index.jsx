@@ -23,7 +23,6 @@ export const SelectAddress = ({ state, dispatch }) => {
     <div>
       <h1>Select Address</h1>
       <div className="select-address-all">
-      {console.log(state.checkout)}
         {state.addresses.length > 0 ? (
           <form
             onSubmit={(e) => handleSubmit(e)}

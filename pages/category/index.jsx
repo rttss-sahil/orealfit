@@ -56,15 +56,15 @@ export const Category = ({ state }) => {
               </Link>
             </li>
             <li>
-              <Link href="/category/whey-proteins-concentrate">
+              <Link href="/category/whey-concentrate">
                 Whey Proteins Concentrate
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/category/rues-whey">
               Reus Whey
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className={`category ${gainerActive ? "active" : ""}`}>
@@ -85,7 +85,7 @@ export const Category = ({ state }) => {
               <Link href="/category/">All Gainers</Link>
             </li> */}
             <li>
-              <Link href="/category/weight-gain">Weight Gain</Link>
+              <Link href="/category/mass-gainers">Weight Gain</Link>
             </li>
             <li>
               <Link href="/category/l-arginine">
@@ -118,7 +118,7 @@ export const Category = ({ state }) => {
               Pre Workout</Link>
             </li>
             <li>
-              <Link href="/category/bcca">BCAA
+              <Link href="/category/bcaa-intra-workout">BCAA
               </Link>
             </li>
             <li>
@@ -162,11 +162,11 @@ export const Category = ({ state }) => {
               L Arginine</Link>
             </li>
             <li>
-              <Link href="/category/l-cosmitine">L Cosmitine</Link>
+              <Link href="/category/l-carnitine">L Cosmitine</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/category/garcinia-com">Garcinia Com</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className={`category ${vitaminActive ? "active" : ""}`}>
@@ -186,14 +186,14 @@ export const Category = ({ state }) => {
               <Link href="/category/">All Vitamins & Wellness</Link>
             </li> */}
             <li>
-              <Link href="/category/omega-fatty-acid">Omega Fatty Acids</Link>
+              <Link href="/category/omega-3">Omega Fatty Acids</Link>
             </li>
             <li>
               <Link href="/category/multi-vitamins">Multi-Vitamins</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/category/workout-essential">Workout Essential</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

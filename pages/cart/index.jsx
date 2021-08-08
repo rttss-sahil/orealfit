@@ -28,7 +28,6 @@ export const Cart = ({ state, dispatch }) => {
             total + Number(item.regular_price || Number(item.price) + 200),
           0
         ));
-        console.log(state.cart[0])
   return (<>
   <Head>
     <title>Cart | Orealfit</title>

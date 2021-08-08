@@ -68,7 +68,6 @@ function Payment({ state, dispatch }) {
       <title>Payment Page</title>
     </Head>
     <div className="payment-page">
-    {console.log(state.checkout)}
       <h1>Payment</h1>
       <div className="payment-all">
         <div onClick={displayRazorpay} className="payment-item">

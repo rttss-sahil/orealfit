@@ -11,10 +11,11 @@ import slider1 from "../../../public/img/slider/slideshow-1.jpg";
 import slider2 from "../../../public/img/slider/slideshow-2.jpg";
 import slider3 from "../../../public/img/slider/slideshow-3.jpg";
 
-import sportSupplements from "../../../public/img/shop-by-categories/sport-supplements.webp";
-import healthyFood from "../../../public/img/shop-by-categories/healthy-food.webp";
-import vitaminAndHealth from "../../../public/img/shop-by-categories/vitamins-and-health.webp";
-import sportswearAndAccessories from "../../../public/img/shop-by-categories/sportswear-and-accessories.webp";
+import proteins from "../../../public/img/shop-by-categories/proteins.jpg";
+import gainers from "../../../public/img/shop-by-categories/Gainer.jpg";
+import prepost from "../../../public/img/shop-by-categories/Pre Post.jpg";
+import fatloss from "../../../public/img/shop-by-categories/normal_1460333_o.png";
+import vitamins from "../../../public/img/shop-by-categories/vitamins.jpg";
 
 import bpi from "../../../public/img/logos/bpi.jpg";
 import cellucor from "../../../public/img/logos/cellucor.png";
@@ -74,27 +75,27 @@ export const HomePage = ({ state, dispatch }) => {
         <h2>Shop by Categories</h2>
         <div className="shop-by-categories-all">
           <div className="shop-by-categories-item">
-            <Image src={sportSupplements} objectFit="fill" />
+            <Image src={proteins} objectFit="fill" />
             <Link href="/">Proteins</Link>
             <Link href="/category/">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
-            <Image src={healthyFood} objectFit="fill" />
+            <Image src={gainers} objectFit="fill" />
             <Link href="/">Gainers</Link>
             <Link href="/category">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
-            <Image src={sportswearAndAccessories} objectFit="fill" />
+            <Image src={prepost} objectFit="fill" />
             <Link href="/">Pre / Post Workout</Link>
             <Link href="/">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
-            <Image src={sportswearAndAccessories} objectFit="fill" />
+            <Image src={fatloss} objectFit="fill" />
             <Link href="/">Fat Loss</Link>
             <Link href="/">Start Shopping</Link>
           </div>
           <div className="shop-by-categories-item">
-            <Image src={vitaminAndHealth} objectFit="fill" />
+            <Image src={vitamins} objectFit="fill" />
             <Link href="/">Vitamins And Essential</Link>
             <Link href="/">Start Shopping</Link>
           </div>
