@@ -64,11 +64,15 @@
 .products-page-item-image {
   position: relative;
   height: 200px !important;
-  max-height: 200px !important;
+  width: 180px !important;
+  /* max-height: 250px !important; */
   cursor: pointer;
+  margin: 0 auto;
   text-align: center;
 }
+
 .products-page-item-image img{
+  max-width: 250px !important;
   padding: 2rem !important;
 }
 
@@ -97,7 +101,7 @@
   flex-direction: row;
   align-items: center;
   color: black;
-  font-weight: normal;
+  /* font-weight: normal; */
 }
 
 .products-page-item-price p:nth-child(2) {

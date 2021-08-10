@@ -68,7 +68,7 @@ export const Product = ({
           </div>
           <div className="products-page-item-discount">
           {product.regular_price 
-            ? "[Save " +
+            ? "[- " +
               (
                 ((product.regular_price - product.price) /
                   product.regular_price) *
@@ -76,7 +76,7 @@ export const Product = ({
               ).toFixed(0) +
               "% off ]"
             : 
-            "[Save " +
+            "[- " +
               (
                 (400 /
                   (Number(product.price) + 200)) *
