@@ -49,7 +49,6 @@ export const HomePage = ({ state, dispatch }) => {
   };
   return (
     <div className="home-page">
-      <h1>Home</h1>
       <div className="slider-all">
         <AwesomeSlider>
           <div className="slider-item">
