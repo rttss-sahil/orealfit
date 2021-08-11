@@ -4,6 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { connect } from "react-redux";
 
+import {FaUnlock} from 'react-icons/fa';
+import {FiPhone, FiMail} from 'react-icons/fi';
+import {TiTick} from 'react-icons/ti';
+import {ImTruck} from 'react-icons/im';
+import {HiOutlineQuestionMarkCircle} from 'react-icons/hi';
+
+
 import Product from '../../Major/Product';
 
 import AwesomeSlider from "react-awesome-slider";
@@ -141,6 +148,46 @@ export const HomePage = ({ state, dispatch }) => {
             <Image src={ssan} />
             <Image src={sunline} />
           </div>
+        </div>
+      </div>
+      <div className="secure-listing">
+        <ul>
+          <li>
+          <FaUnlock />
+            <h3>100% Secure Payments</h3>
+            <p>Secure checkout verified by Norton VeriSign.</p>
+          </li>
+          <li>
+          <TiTick />
+            <h3>100% Authentic Products</h3>
+            <p>We only deal with original products</p>
+          </li>
+          <li>
+          <ImTruck />
+            <h3>Fast Delivery Service</h3>
+            <p>Fast delivery, competitive prices and excellent services</p>
+          </li>
+        </ul>
+      </div>
+      <div className="got-a-question">
+      <div>
+        <HiOutlineQuestionMarkCircle />
+        <h2>Got A Question?</h2>
+        <p>We are here to help you! If you have any questions feel free to contact us through:</p>
+        <div>
+          <Link href="tel:91925009095">
+            <div>
+              <FiPhone />
+              <p>Phone</p>
+            </div>
+          </Link>
+          <Link href="mailto:info@orealfit.com">
+            <div>
+              <FiMail />
+              <p>Email</p>
+            </div>
+          </Link>
+      </div>
         </div>
       </div>
     </div>
