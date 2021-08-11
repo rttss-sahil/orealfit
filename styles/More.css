@@ -4,7 +4,7 @@
   justify-content: space-between;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 4rem;
 }
 
 .more-page-options .option-item:last-child {
@@ -12,12 +12,13 @@
 }
 
 .more-page-options .option-item a {
-  color: blue;
+  color: gray;
   font-size: 1rem;
   text-decoration: none;
 }
 
 .more-page-options .option-item a:hover {
+  color: black;
   text-decoration: underline;
 }
 
